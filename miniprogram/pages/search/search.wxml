@@ -1,0 +1,8 @@
+
+<view class="search-bar">
+  <view class="input-box">
+    <text class="iconfont icon-fangdajing iconsize"></text>
+    <input type="text" placeholder="搜索你想听的节目"></input>
+  </view>
+  <text class="btn-quxiao">取消</text>
+</view>

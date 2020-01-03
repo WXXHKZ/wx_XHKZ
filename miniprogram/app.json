@@ -1,10 +1,12 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/index/index",
     "pages/category/category",
     "pages/find/find",
     "pages/collection/collection",
     "pages/profile/profile"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

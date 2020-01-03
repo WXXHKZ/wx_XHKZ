@@ -1,0 +1,32 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1596656_9q9zt0a7ej.eot?t=1578062868192'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1596656_9q9zt0a7ej.eot?t=1578062868192#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANEAAsAAAAAB2wAAAL1AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqBfIFvATYCJAMUCwwABCAFhG0HVhuJBsiemjwpkTUC38BsUCj8gMTj4Wu/13N390HeD7BLFKBEHF9VBQCWbVUrXY3v+KDwyeSappcfdQQ6Q0WMD8lDOZ8hCTNjgNU6YZndWjU5ufv+N2EOCBtwGknkKU7+H/dOm0CBzNe2cphj8r8oihMMaKxNkRVQotwwvXwNeSCOE+hMS2Y6rW3uBv4KPi4Q71SZB/6ZkKKwbCvUFUtLG39V2vQ7HQB/gu/HNcgMf5Iq4yfdeVEjgfIz5E2Ay7dzL6/4NZ0DbBUZK4BCfKlMvQMFI0Dd7ziHgE4rSWfIM+M59c4YSCTcEzrxh0dWJEHUIE8/OJQunCHFIXM2o1SlPoUcEucJkmeprEAXlW0DPuCa8eC6kIQYHA3ya76GPD52Pz31hL689D0/z3T3ppebnz29L96+p5+e5cfDoefn3saeLy98MBx4owTPKVrYLa11/L/ONDpsqhF801pnSu0MKh8VV1VtbVWX7laO3HHRMdwtdxcdfWenxURzd50Zm19jcfD4+vpYyzNugcdJHUj46X6bMRKMgvI4MyrXfeIGj3BivtmNzK8SXPkN5+muV5PHQov/6BXwP2ciKpB1U3mXap3FLz2vJBkwMlcKi6uCEtUmQyIZElGZnsCTeL+6W+Qb9T2NbuI2MqE1kUDSmIKsNYMu+BWo9KxCrXUAnWV1q3vGUFCUPizZABCGHUEy6B9kw67QBf8FlUm/UBsOCJ27Ebllz1yo5iqKeYYlJMwgVXTYibQyc1jdieUJK0/T0oDYi6muRlFGano+W4ftmE4xQ5+UMxkjiFCHDdWC07DV6kBO6tCwyFIVxpyFaWmk6k2posMGzE5QGI/BJIhgBqISOdgR054xFz7fCZNNsOLRBkSHuxdG6dTOkQyp0jug61T2TohbeUU3SZaJYQiEoBxskFrgwKwi5YA4qwdpMBGTShmQcCqUhpqRrqrU5TW2FyhkDfBtq0iRo0QVteapojpVu2wmvHZKvBYbdIXyEQo7/KfVvCBjBAAAAAA=') format('woff2'),
+  url('//at.alicdn.com/t/font_1596656_9q9zt0a7ej.woff?t=1578062868192') format('woff'),
+  url('//at.alicdn.com/t/font_1596656_9q9zt0a7ej.ttf?t=1578062868192') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1596656_9q9zt0a7ej.svg?t=1578062868192#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chiping:before {
+  content: "\e724";
+}
+
+.icon-fangdajing:before {
+  content: "\e6b8";
+}
+
+.icon-shangsheng:before {
+  content: "\e620";
+}
+
+.icon-xiajiang:before {
+  content: "\e679";
+}
