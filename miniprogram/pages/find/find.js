@@ -1,4 +1,4 @@
-// miniprogram/pages/index.js
+// pages/find/find.js
 Page({
 
   /**
