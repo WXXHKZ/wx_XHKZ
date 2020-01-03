@@ -1,2 +1,17 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category">
+<view class="searchbox">
+  <view class="searchIn">
+  搜索你想听的节目
+  </view>
+</view>
+<view class="ca-content">
+  <view class="menu">
+    <view wx:for="{{menuList}}" class="menu-item">
+     {{item}}
+    </view>
+  </view>
+  <view class="cate-show">
+  </view>
+</view>
+</view>
