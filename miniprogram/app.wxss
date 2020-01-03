@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import './iconFont/iconFont-panghao.wxss';
 .container {
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .userinfo, .uploader, .tunnel {
