@@ -12,7 +12,7 @@ page{
 }
 .input-box{
   background: #f5f5f5;
-  color: #eee;
+  color: #999;
   flex:1;
   display: flex;
   height: 68rpx;
@@ -21,6 +21,9 @@ page{
   align-items: center;
   font-size: 28rpx;
   border-radius: 20rpx;
+}
+.input-box>input{
+  flex:1;
 }
 .iconsize{
   color: #ccc;

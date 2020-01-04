@@ -3,6 +3,30 @@
   <view class="input-box">
     <text class="iconfont icon-fangdajing iconsize"></text>
     <input type="text" placeholder="搜索你想听的节目"></input>
+    <text class="iconfont icon-shanchu iconsize"></text>
   </view>
   <text class="btn-quxiao">取消</text>
+</view>
+
+<view class="hidtory">
+  <view>
+    <text>搜索历史</text>
+    <text class="iconfont icon-lajitong"></text>
+  </view>
+  <view>
+    <text>德云社</text>
+  </view>
+</view>
+
+<view class="hot">
+  <view>
+    热门搜索
+  </view>
+  <view class="list">
+    <view>
+      <text>1</text>
+      <text>我和我的祖国</text>
+      <text class=" iconfont icon-shangsheng"></text>
+    </view>
+  </view>
 </view>
