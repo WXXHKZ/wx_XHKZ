@@ -1,1 +1,35 @@
 /* pages/category/category.wxss */
+.category{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.searchbox{
+  background: #fff;
+  padding: 20rpx;
+}
+.searchIn{
+  background: #eff1f4;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  padding:10rpx;
+  color: #ababab;
+}
+.ca-content{
+  flex:1;
+  display: flex;
+}
+.menu{
+  width: 180rpx;
+  background: #eff1f4;
+  margin-top: 20rpx;
+  overflow-y:scroll; 
+  height: 100%;
+}
+.cate-show{
+  flex: 1;
+  background: yellowgreen;
+}
+.menu-item{
+  height: 100rpx;
+}
