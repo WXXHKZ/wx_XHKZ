@@ -4,7 +4,7 @@
   padding: 10rpx 20rpx;
   border-radius: 10rpx;
   margin: 0 20rpx 20rpx;
-  color: #999
+  color: #999;
 }
 
 .icon-sousuo{
