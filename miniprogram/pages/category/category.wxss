@@ -16,20 +16,66 @@
   color: #ababab;
 }
 .ca-content{
+  position: relative;
   flex:1;
   display: flex;
 }
 .menu{
   width: 180rpx;
   background: #eff1f4;
-  margin-top: 20rpx;
   overflow-y:scroll; 
   height: 100%;
 }
-.cate-show{
-  flex: 1;
-  background: yellowgreen;
+.menu-fill{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 40rpx;
+    background: #eff1f4;
+    width: 180rpx;
+}
+.menu-out{
+  padding-top: 40rpx;
 }
 .menu-item{
   height: 100rpx;
+  color: #ababab;
+  font-size: 30rpx;
+  padding-left: 30rpx;
 }
+.menu-active{
+  color: #f86442;
+  font-weight: 700;
+}
+.cate-show{
+  flex: 1;
+  background: #eff1f4;
+  overflow-y:scroll; 
+  height: 100%;
+}
+.cate-item{
+
+}
+.cate-title{
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 34rpx;
+  color: #313234;
+  padding: 10rpx 0 ;
+  margin-top: 20rpx;
+}
+.cate-content{
+  display: flex;
+  background: #fff;
+  height: 160rpx;
+  flex-wrap: wrap;
+  border-radius: 20rpx;
+}
+.cate-text{
+  flex:0 0 33.33%;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+
