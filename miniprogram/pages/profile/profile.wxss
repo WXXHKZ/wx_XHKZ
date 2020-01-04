@@ -1,1 +1,26 @@
 /* pages/profile/profile.wxss */
+@import '/iconFont/iconFont-lizz.wxss';
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.main >view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top{
+  background: #fff;
+  padding: 0 20rpx;
+}
+.main{
+  background: #fff;
+  padding: 0 20rpx;
+}

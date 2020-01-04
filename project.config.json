@@ -9,8 +9,8 @@
 		"newFeature": true,
 		"enhance": true
 	},
-	"appid": "wxd24fa58395061abb",
-	"projectname": "XHKZ",
+	"appid": "wx65e7ff30390962c8",
+	"projectname": "wx_XHKZ",
 	"libVersion": "2.10.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -32,8 +32,7 @@
 		},
 		"miniprogram": {
 			"current": 0,
-			"list": [
-			]
+			"list": []
 		}
 	}
 }
