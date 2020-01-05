@@ -1,0 +1,9 @@
+<view class="star-top">
+  <text class="star-title">小编推荐</text>
+  <text class="star-more">查看全部></text>
+</view>
+<view class="starList">
+  <view class="starItem" wx:for="{{starList}}">
+    <image class="starImg" src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}"></image>
+  </view>
+</view>

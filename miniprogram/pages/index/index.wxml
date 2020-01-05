@@ -2,11 +2,8 @@
   <i class="iconfont icon-sousuo"></i>
   <text>搜索你想听的节目</text>
 </view>
-<swiper bindchange="swiper" easing-function="linear" indicator-active-color="#fff" indicator-color="#999" indicator-dots="true" interval="3000" duration="500" circular="true">
-  <block wx:for="{{swiperImgUrls}}" wx:key="url" wx:for-index="i">
-    <swiper-item class="index-swiper">
-      <!-- image 的mode属性 scaleToFill(缩放,但不等比,让图片完全填满image容器) aspectFit(宽度填满容器) widthFix(缩放,等比缩放)-->
-      <image src="{{item.url}}" mode="widthFix" class="swiperImg {{i==index? 'active':''}}"></image>
-    </swiper-item>
-  </block>
-</swiper>
+<!-- 轮播图组件 -->
+<x-swiper />
+<!-- 按钮组件 -->
+<x-menuList />
+<x-star />

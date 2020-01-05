@@ -19,7 +19,7 @@ Page({
       }
     ],
     playlist: [],
-    index: 0
+    index: 0,
   },
 
 

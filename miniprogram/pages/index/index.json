@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "x-menuList": "/components/indexMenuList/indexMenuList",
+    "x-swiper": "/components/indexSwiper/indexSwiper",
+    "x-star": "/components/indexStar/indexStar"
+  }
 }

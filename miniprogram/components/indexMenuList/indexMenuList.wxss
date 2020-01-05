@@ -1,0 +1,29 @@
+.index-menuList{
+  display: flex;
+  padding: 20rpx;
+  flex-wrap: wrap;
+}
+
+.menu-item{
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+}
+
+.menu-icon{
+  width: 88rpx !important;
+  display: block !important;
+  height: 88rpx !important;
+  border-radius: 50%;
+}
+
+.menu-tit{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  padding-top: 10rpx;
+}
