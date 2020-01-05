@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Album":"../../components/search/Album/Album"
+  },
+  "navigationBarTitleText": "搜索"
+}

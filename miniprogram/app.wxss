@@ -1,5 +1,6 @@
 /**app.wxss**/
 @import './iconFont/iconFont-panghao.wxss';
+@import './iconFont/iconFont-chenxuejing.wxss';
 .container {
   display: flex;
   flex-direction: column;
