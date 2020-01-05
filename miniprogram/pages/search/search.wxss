@@ -2,6 +2,7 @@
 
 page{
   background: #fff;
+  overflow: hidden;
 }
 .search-bar{
   display: flex;
@@ -113,3 +114,36 @@ page{
   font-size: 24rpx;
   margin: 0 20rpx;
 }
+
+
+.nav-bar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:20rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.total-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 20rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+.total-box .total{
+  display: flex;
+}
+.total-box .total .total-msg{
+  color: orangered
+}
+.total-box .sort{
+  display: flex;
+  align-items: center;
+}
+.total-box .sort .iconsort{
+  padding: 0 20rpx; 
+  font-size: 24rpx;
+}
+
+
