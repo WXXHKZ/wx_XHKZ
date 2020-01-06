@@ -1,2 +1,71 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view id="{{skinStyle}}_wrap">
+  <!-- 顶部用户 -->
+  <view class="top">
+    <view class="user">
+      <view class="left">
+        <icon class="iconfont weixin"></icon>
+        <text>用户名</text>
+        <icon class="iconfont vip"></icon>  
+      </view>
+      <view class="serve">
+        <icon class="iconfont kefu"></icon>
+        <text>客服服务</text>
+      </view>
+    </view>
+  <!-- 签到 -->
+    <view class="sign">
+      <view class="left">
+        <icon class="iconfont signin"></icon>
+        <text>签到</text>
+      </view>
+      <view class="right">
+        >
+      </view>
+    </view>
+  </view>
+
+
+  <view class="main">
+  <!-- 定时关闭 -->
+    <view class="close">
+      <view class="left">
+        <icon class="iconfont time"></icon>
+        <text>定时关闭</text>
+      </view>
+      <view class="right">
+        >
+      </view>
+    </view>
+    <!-- 夜间模式 -->
+    <view class="night">
+      <view class="left">
+        <icon class="iconfont lighting"></icon>
+        <text>夜间模式</text>
+      </view>
+      <switch bindchange="switchChange" checked="{{skinSwitch}}">
+        
+      </switch>
+    </view>
+    <!-- 意见反馈 -->
+    <view class="feedback">
+      <view class="left">
+        <icon class="iconfont Opinion"></icon>
+        <text>意见反馈</text>
+      </view>
+      <view class="right">
+        >
+      </view>
+    </view>
+    <!-- 切换账号 -->
+    <view class="changeNum">
+      <view class="left">
+        <icon class="iconfont change"></icon>
+        <text>切换账号</text>
+      </view>
+      <view class="right">
+        >
+      </view>
+    </view>
+  </view>
+</view>

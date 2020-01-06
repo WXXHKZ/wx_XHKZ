@@ -1,0 +1,13 @@
+/* mine */
+#black_wrap{
+  background: #444;
+}
+#black_wrap .top{
+  background: #313335;
+  color: #646566;
+}
+#black_wrap .main{
+  background: #313335;
+  color: #646566;
+  min-height: calc(100vh - 110rpx);
+}

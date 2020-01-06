@@ -5,8 +5,8 @@
     "pages/find/find",
     "pages/collection/collection",
     "pages/profile/profile",
-    "pages/search/search"
-    
+    "pages/search/search",
+    "pages/playlist/playlist"
   ],
   "window": {
     "backgroundColor": "#fff",
@@ -17,7 +17,7 @@
   },
   "tabBar": {
     "color": "#474747",
-    "selectedColor": "d43c43",
+    "selectedColor": "#d43c43",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -49,7 +49,6 @@
         "iconPath": "images/profile.png",
         "selectedIconPath": "images/profile-active.png"
       }
-      
     ]
   },
   "sitemapLocation": "sitemap.json",

@@ -1,1 +1,19 @@
-<view class="cateList">列表</view>
+<view class="cateList">
+  <view wx:for="{{categoryList}}" wx:key="id" class="cateItem">
+    <view class="itemImgBox">
+      <image class="cateItemImg" mode="widthFix" src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}"></image>
+    </view>
+    <view class="itemDetail">
+      <view class="itemDetTit">
+        {{item.albumInfo.title}}
+      </view>
+      <view class="itemDetDes">
+        {{item.albumInfo.shortIntro}}
+      </view>
+      <view class="itemDetPrice">
+        <i class="iconfont icon-erji countErji" /> {{item.statCountInfo.playCount}}
+        <text class="countAll">{{item.statCountInfo.trackCount}}集</text>
+      </view>
+    </view>
+  </view>
+</view>

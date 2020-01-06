@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    menuList:[]
   },
-
+  activeClick(e){
+    console.log(e.currentTarget.dataset.item)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://m.ximalaya.com/m-revision/page/category/queryCategories',
+      success:(res)=>{
+        this.setData({
+          menuList: res.data.data
+        })
+      }
+    })
   },
 
   /**

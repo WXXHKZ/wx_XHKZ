@@ -1,2 +1,30 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category">
+  <view class="searchbox">
+    <view class="searchIn">
+      搜索你想听的节目
+    </view>
+  </view>
+  <view class="ca-content">
+    <view class="menu-fill">
+    </view>
+    <view class="menu">
+      <view class="menu-out">
+        <view wx:for="{{menuList}}" wx:key="idx" wx:for-index="idx" class="menu-item {{idx==0? 'menu-active':''}}" bindtap="activeClick" data-item="{{item.category.displayName}}">
+          {{item.category.displayName}}
+        </view>
+      </view>
+    </view>
+    <view class="cate-show">
+      <view class="cate-item" wx:for="{{menuList}}" wx:key="{{item.category.subCategoryId}}" wx:for-index="idx">
+        <view class="cate-title">{{item.category.displayName}}</view>
+        <view class="cate-content">
+            <view class="cate-text" wx:for="{{item.category.subCategories}}" wx:key="{{item.metaDataId}}" wx:for-index="idx" wx:if="{{idx<6}}">
+                 {{item.displayValue}}
+            </view>
+           
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
