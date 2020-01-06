@@ -1,3 +1,4 @@
+@import "style/skin.wxss";
 /**app.wxss**/
 @import './iconFont/iconFont-panghao.wxss';
 @import './iconFont/iconFont-chenxuejing.wxss';

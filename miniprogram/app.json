@@ -6,7 +6,6 @@
     "pages/collection/collection",
     "pages/profile/profile",
     "pages/search/search"
-    
   ],
   "window": {
     "backgroundColor": "#fff",
@@ -49,7 +48,6 @@
         "iconPath": "images/profile.png",
         "selectedIconPath": "images/profile-active.png"
       }
-      
     ]
   },
   "sitemapLocation": "sitemap.json",
