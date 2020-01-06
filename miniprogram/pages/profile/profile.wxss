@@ -1,9 +1,31 @@
 /* pages/profile/profile.wxss */
 @import '/iconFont/iconFont-lizz.wxss';
+.top>view{
+  line-height: 100rpx;
+  height: 100rpx;
+}
+.top{
+  background: #fff;
+  padding: 0 20rpx;
+}
 .user{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.right{
+  color: #c7c7cc;
+  font-size: 36rpx;
+}
+.user .serve{
+  font-size: 24rpx;
+}
+.user .left text{
+  font-size: 36rpx;
+}
+.left text{
+  margin: 0 30rpx;
+  font-size: 32rpx;
 }
 .sign{
   display: flex;
@@ -11,16 +33,14 @@
   justify-content: space-between;
   margin-bottom: 10rpx;
 }
+.main{
+  background: #fff;
+  padding: 0 20rpx;
+}
 .main >view{
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.top{
-  background: #fff;
-  padding: 0 20rpx;
-}
-.main{
-  background: #fff;
-  padding: 0 20rpx;
+  line-height: 100rpx;
+  height: 100rpx;
 }
