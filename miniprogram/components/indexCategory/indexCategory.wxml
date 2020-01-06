@@ -1,7 +1,11 @@
-<view class="cate-list">
-  <view class="cate-top">
-    <text class="cate-title">小编推荐</text>
-    <text class="cate-more">查看全部></text>
+<view class="cateBox">
+  <view class="cate-list" wx:for="{{category}}" wx:key="id">
+    <view class="cate-top">
+      <text class="cate-title">
+        {{item.moduleInfo.displayName}}
+      </text>
+      <text class="cate-more">查看全部></text>
+    </view>
+    <x-cateList cateList="{{item.albumBriefDetailInfos}}" />
   </view>
-  <x-cateList />
 </view>

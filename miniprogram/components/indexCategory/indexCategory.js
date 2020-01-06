@@ -11,7 +11,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    category:[]
   },
 
   /**
@@ -28,7 +28,9 @@ Component({
         url: 'https://m.ximalaya.com/m-revision/page/index/queryIndexCategoryTabContent?moduleKey=youshengshu',
         dataType: 'json',
         success: (res) => {
-          console.log(res.data.data.moduleContent.moduleRankDatas)
+          this.setData({
+            category: res.data.data.moduleContent.moduleRankDatas
+          })
         }
       })
     },

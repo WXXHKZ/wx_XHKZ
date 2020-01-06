@@ -42,7 +42,7 @@ Component({
         dataType: 'json',
         success: (res) => {
           let StarList = res.data.data.moduleContent.moduleRankDatas[0].albumBriefDetailInfos.slice(0, 3)
-          StarList.map((item)=>{
+          StarList.map((item) => {
             let count = item.statCountInfo.playCount
             item.statCountInfo.playCount = this._tranNumber(count, 2)
           })
