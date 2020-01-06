@@ -1,0 +1,14 @@
+<!-- 轮播图  indicator-dots="true" 表示轮播小点指示器 autoplay自动播放 interval图片轮播间隔  duration图片切换时间 circular(采用衔接滑动)-->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+  <block wx:for="{{swiperImgUrls}}" wx:key="url">
+    <swiper-item>
+      <!-- image 的mode属性 scaleToFill(缩放,但不等比,让图片完全填满image容器) aspectFit(宽度填满容器) widthFix(缩放,等比缩放)-->
+      <image src="{{item.url}}" mode="widthFix" class="swiperImg"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="playlist-container">
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <c-playlist playlist="{{item}}"></c-playlist>
+  </block>
+</view>
