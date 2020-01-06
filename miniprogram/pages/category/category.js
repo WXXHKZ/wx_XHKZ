@@ -22,6 +22,7 @@ Page({
         })
       }
     })
+    console.log(1)
   },
 
   /**
