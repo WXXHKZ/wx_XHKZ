@@ -19,6 +19,19 @@ Component({
    */
   methods: {
 
+    _tranNumber(num, point) {
+      let numStr = num.toString().split('.')[0]
+      if (numStr.length < 6) {
+        return numStr
+      } else if (numStr.length >= 6 && numStr.length <= 8) {
+        let decimal = numStr.substring(numStr.length - 4, numStr.length - 4 + point)
+        return parseFloat(parseInt(num / 10000) + '.' + decimal) + '万'
+      } else if (numStr.length > 8) {
+        let decimal = numStr.substring(numStr.length - 8, numStr.length - 8 + point)
+        return parseFloat(parseInt(num / 100000000) + '.' + decimal) + '亿'
+      }
+    }
+
   },
 
   lifetimes: {
@@ -28,10 +41,14 @@ Component({
         url: 'https://m.ximalaya.com/m-revision/page/index/queryIndexCategoryTabContent?moduleKey=youshengshu',
         dataType: 'json',
         success: (res) => {
+          let StarList = res.data.data.moduleContent.moduleRankDatas[0].albumBriefDetailInfos.slice(0, 3)
+          StarList.map((item)=>{
+            let count = item.statCountInfo.playCount
+            item.statCountInfo.playCount = this._tranNumber(count, 2)
+          })
           this.setData({
             starList: res.data.data.moduleContent.moduleRankDatas[0].albumBriefDetailInfos.slice(0, 3)
           })
-          console.log(this.data.starList)
         }
       })
     },

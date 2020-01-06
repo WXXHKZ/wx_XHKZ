@@ -6,4 +6,7 @@
 <x-swiper />
 <!-- 按钮组件 -->
 <x-menuList />
+<!-- 推荐组件 -->
 <x-star />
+<!-- 分类列表组件 -->
+<x-category />
