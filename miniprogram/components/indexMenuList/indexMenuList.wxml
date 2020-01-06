@@ -1,0 +1,6 @@
+<view class="index-menuList">
+  <view wx:for="{{menuList}}" wx:key="id" class="menu-item">
+    <image class="menu-icon" src="{{item.url}}"></image>
+    <text class="menu-tit">{{item.title}}</text>
+  </view>
+</view>
