@@ -1,0 +1,26 @@
+<!--components/search/Anchor/Anchor.wxml-->
+<scroll-view class="scroll-box" style="height: 900rpx;" scroll-y="true" bindscrolltolower="handlescrollbottom">
+
+ <view wx:for="{{datalist}}" wx:key="index" class="list-box">
+    <view class="li-item">
+      <view class="image-box">
+        <image mode="widthFix" src="{{item.userInfo.smallPic}}" alt="" />
+      </view>
+      <view class="li-content">
+        <view class="title">{{item.userInfo.nickname}}</view>
+        <view class="intro">{{item.userInfo.pTtitle}}</view>
+        <view class="other-box">
+          <view class="other-msg">
+            <view class="iconfont icon-yinpin icon-1"></view>
+            {{item.userInfo.tracks_counts}}
+          </view>
+          <view class="other-msg">
+            <view class="iconfont icon-xin icon-1"></view>
+            {{item.userInfo.followers_counts}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
