@@ -49,16 +49,16 @@
 }
 .menu-active{
   color: #f86442;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 32rpx;
 }
 .cate-show{
   flex: 1;
   background: #eff1f4;
-  overflow-y:scroll; 
   height: 100%;
 }
-.cate-item{
-
+.cate-fill{
+  padding-bottom: 732rpx;
 }
 .cate-title{
   height: 60rpx;

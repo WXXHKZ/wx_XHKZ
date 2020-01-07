@@ -1,0 +1,8 @@
+<!--components/login/login.wxml-->
+<c-bottom-modal modalShow="{{modalShow}}">
+  <view slot="model-content">
+    <!-- open-type="getUserInfo" 获取当前用户信息 -->
+    <!-- bindgetuserinfo 为获取用户信息的事件处理函数 -->
+    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" class="login">获取微信授权信息</button>
+  </view>
+</c-bottom-modal>

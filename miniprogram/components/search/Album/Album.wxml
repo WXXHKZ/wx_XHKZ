@@ -1,6 +1,6 @@
 <!--components/search/Album/Album.wxml-->
-<view class="scroll-box">
-  <view wx:for="{{searchdata.albumViews.albums}}" wx:key="index" class="list-box">
+<scroll-view class="scroll-box" style="height: 900rpx;" scroll-y="true" bindscrolltolower="handlescrollbottom">
+  <view wx:for="{{datalist}}" wx:key="index" class="list-box">
     <view class="li-item">
       <view class="image-box">
         <image mode="widthFix" src="{{item.albumInfo.cover_path}}" alt="" />
@@ -22,4 +22,4 @@
       <view class="iconfont icon-bofang1 play-btn"></view>
     </view>
   </view>
-</view>
+</scroll-view>

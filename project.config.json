@@ -21,11 +21,12 @@
 			"outputPath": ""
 		}
 	},
-	"appid": "wx65e7ff30390962c8",
+	"appid": "wxd24fa58395061abb",
 	"projectname": "wx_XHKZ",
 	"libVersion": "2.10.0",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -42,9 +43,26 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "blog",
+					"pathName": "pages/blog/blog",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "playlist",
+					"pathName": "pages/playlist/playlist",
+					"scene": null
+				}
+			]
 		}
 	}
 }
