@@ -1,2 +1,31 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class="category">
+  <view class="searchbox">
+    <view class="searchIn">
+      搜索你想听的节目
+    </view>
+  </view>
+  <view class="ca-content">
+    <view class="menu-fill">
+    </view>
+    <scroll-view scroll-y="true"    class="menu">
+      <view class="menu-out" >
+        <view wx:for="{{menuList}}" wx:key="idx" wx:for-index="idx"  class="menu-item {{activeBtn==item.category.name? 'menu-active':''}}" bindtap="activeClick" data-item="{{item.category.name}}" data-index="{{idx}}">
+          {{item.category.displayName}}
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y="true"  bindscrolltoupper="upper" scroll-with-animation="true" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" class="cate-show">
+      <view class="cate-item" id="{{item.category.name}}" wx:for="{{menuList}}" wx:key="categoryId" wx:for-index="idx">
+        <view class="cate-title">{{item.category.displayName}}</view>
+        <view class="cate-content">
+            <view class="cate-text" wx:for="{{item.category.subCategories}}" wx:key="idx" wx:for-index="idx" wx:if="{{idx<6}}">
+                 {{item.displayValue}}
+            </view>
+           
+        </view>
+      </view>
+      <view class="cate-fill"></view>
+    </scroll-view>
+  </view>
+</view>

@@ -6,7 +6,7 @@
   </button>
   </view>
   <view class="phone">
-    <button open-type="getPhoneNumber">
+    <button bindtap="login">
       手机号登陆
     </button>
   </view>
@@ -16,8 +16,11 @@
   <view class="top">
     <view class="user">
       <view class="left">
-        <icon class="iconfont weixin"></icon>
-        <text>用户名</text>
+        <view id="mine" bindtap="changeLog">
+          <cover-image id="userImg" src="{{userImg}}"></cover-image>
+          <icon class="iconfont weixin"></icon>
+        </view>
+        <text>{{userName}}</text>
         <icon class="iconfont vip"></icon>  
       </view>
       <view class="serve">

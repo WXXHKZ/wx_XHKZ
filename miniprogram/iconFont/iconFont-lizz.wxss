@@ -49,6 +49,6 @@
   border: 1px solid white;
   border-radius: 50%;
   background: #fff;
-  font-size: 24rpx !important;
+  font-size: 36rpx !important;
 }
 

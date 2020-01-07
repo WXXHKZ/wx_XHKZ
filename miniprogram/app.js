@@ -26,7 +26,7 @@ App({
         }
       })
     } else {
-      console.log("app"+ 0)
+      
     }
     this.globalData = {}
     this.skin()
@@ -71,6 +71,7 @@ App({
       borderStyle: 'white'
     })
   },
+  // 新皮肤
   skin: function() {
     var that = this
     wx.getStorage({

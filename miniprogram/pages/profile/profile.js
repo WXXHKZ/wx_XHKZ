@@ -9,6 +9,17 @@ Page({
     skinStyle: '',
     skinSwitch: '',
     isHide: true,
+    userName: '',
+    userImg: '',
+  },
+
+  // 切换登录
+  changeLog: function() {
+    this.setData({
+      isHide: true,
+      userName: '',
+      userImg: ''
+    })
   },
 
   /** 切换模式 **/
@@ -53,7 +64,6 @@ Page({
     }) 
     // 是否第一次进入
     var fir = wx.getStorageSync('fir')
-    console.log(fir)
     if (fir === 1) {
       wx.getUserInfo({
         success: function (res) {
@@ -61,7 +71,7 @@ Page({
         }
       })
     } else {
-      console.log("p",0)
+      
     }
   },
 
@@ -70,14 +80,17 @@ Page({
       var that = this
       let user = e.detail.userInfo
       // 用户信息
-      console.log(e.detail.userInfo)
-    } else {
-      wx.showModal({
-        title: '警告',
-        content: '拒绝授权',
+      console.log(user)
+      this.setData({
+        isHide: false,
+        userName: user.nickName,
+        userImg: user.avatarUrl
       })
+    } else {
+      console.log('没登陆wx')
     }
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

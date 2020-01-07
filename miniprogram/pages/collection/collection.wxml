@@ -1,2 +1,16 @@
 <!--pages/collection/collection.wxml-->
-<text>pages/collection/collection.wxml</text>
+<view id="login" wx:if="{{isHide}}">
+  <view class="wChat">
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    微信登陆
+  </button>
+  </view>
+  <view class="phone">
+    <button bindtap="login">
+      手机号登陆
+    </button>
+  </view>
+</view>
+<view wx:else>
+  <text>pages/collection/collection.wxml</text>
+</view>

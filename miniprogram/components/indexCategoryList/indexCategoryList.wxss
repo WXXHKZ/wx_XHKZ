@@ -1,3 +1,56 @@
-.cateList{
-  padding-top: 20rpx;
+.cateItem {
+  display: flex;
+  width: 100%;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.itemImgBox {
+  width: 193rpx;
+  height: 193rpx;
+}
+
+.cateItemImg {
+  width: 193rpx !important;
+  height: 193rpx !important;
+  border-radius: 20rpx;
+}
+
+.itemDetail {
+  width: 70%;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.itemDetTit {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+
+.itemDetDes {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.itemDetPrice{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 24rpx;
+  color: #666;
+  padding-left: 20rpx;
+}
+
+.countErji{
+  font-size: 20rpx;
+}
+
+.countAll{
+  padding-left: 30rpx;
 }

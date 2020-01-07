@@ -22,6 +22,11 @@ Page({
     index: 0,
   },
 
+  handleSearch(){
+    wx.navigateTo({
+      url: `/pages/search/search`,
+    })
+  },
 
   swiper: function(e) {
     var index = e.detail.current

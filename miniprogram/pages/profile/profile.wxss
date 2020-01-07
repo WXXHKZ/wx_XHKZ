@@ -4,15 +4,29 @@
 .top{
   background: #fff;
 }
+#userImg{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+#mine{
+  position: relative;
+}
+#mine .iconfont{
+  position: absolute;
+  bottom: calc(25% - 57rpx);
+  right: calc(25% - 21rpx);
+}
 .top>view{
   line-height: 100rpx;
   height: 100rpx;
 }
-.user{
+.top .user{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 40rpx;
+  padding: 60rpx 40rpx;
+  height: 100%;
 }
 .right{
   color: #c7c7cc;

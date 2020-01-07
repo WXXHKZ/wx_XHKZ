@@ -1,5 +1,5 @@
 <view class="index-menuList">
-  <view wx:for="{{menuList}}" wx:key="id" class="menu-item">
+  <view wx:for="{{menuList}}" wx:key="id" class="menu-item" data-id="{{item.id}}" bindtap="handleTapNav">
     <image class="menu-icon" src="{{item.url}}"></image>
     <text class="menu-tit">{{item.title}}</text>
   </view>
