@@ -55,6 +55,12 @@
 					"name": "blog",
 					"pathName": "pages/blog/blog",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "playlist",
+					"pathName": "pages/playlist/playlist",
+					"scene": null
 				}
 			]
 		}

@@ -33,7 +33,7 @@ Component({
     // 进入歌曲列表页面
     goToMusicList(){
       wx.navigateTo({
-        url: `../../pages/musiclist/musiclist?playlistId=${this.properties.playlist.id}`,
+        url: `/pages/musiclist/musiclist?playlistId=${this.properties.playlist.id}`,
       })
     },
 
