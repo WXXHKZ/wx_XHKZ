@@ -63,16 +63,16 @@ Component({
         })
 
         // 推送模板消息
-        wx.cloud.callFunction({
-          name: 'sendMessage',
-          data: {
-            content,
-            formId,
-            blogId: this.properties.blogId,
-          }
-        }).then((res) => {
-          console.log(res)
-        })
+        // wx.cloud.callFunction({
+        //   name: 'sendMessage',
+        //   data: {
+        //     content,
+        //     formId,
+        //     blogId: this.properties.blogId,
+        //   }
+        // }).then((res) => {
+        //   console.log(res)
+        // })
 
         this.setData({
           modalShow: false,

@@ -8,7 +8,8 @@
     "pages/profile/profile",
     "pages/search/search",
     "pages/detail/detail",
-    "pages/blog-edit/blog-edit"
+    "pages/blog-edit/blog-edit",
+    "pages/blog-comment/blog-comment"
   ],
   "window": {
     "backgroundColor": "#fff",
