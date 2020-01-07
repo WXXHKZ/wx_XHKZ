@@ -48,7 +48,6 @@ Component({
       this.setData({
         categoryList: CategoryList
       })
-      console.log(this.data.categoryList)
     }
   }
 })

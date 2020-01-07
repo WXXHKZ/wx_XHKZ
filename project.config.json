@@ -43,9 +43,20 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 0,
-			"list": []
+			"list": [
+				{
+					"id": -1,
+					"name": "blog",
+					"pathName": "pages/blog/blog",
+					"scene": null
+				}
+			]
 		}
 	}
 }
