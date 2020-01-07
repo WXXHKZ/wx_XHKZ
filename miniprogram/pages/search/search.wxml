@@ -1,0 +1,59 @@
+<view class="search-bar">
+  <view class="input-box">
+    <text class="iconfont icon-fangdajing iconsize"></text>
+    <input type="text" placeholder="搜索你想听的节目" bindinput="handleinput" value="{{value}}" bindconfirm="handlesearch"></input>
+    <text class="iconfont icon-shanchu iconsize" wx:if="{{value!==''}}" bindtap="handleclear"></text>
+  </view>
+  <text class="btn-quxiao">取消</text>
+</view>
+
+
+<view class="showlist" wx:if="{{searchdata===''}}">
+  <view class="hidtory" wx:if="{{historydata!==''}}">
+    <view class="h3">
+      <text>搜索历史</text>
+      <view class="iconfont icon-lajitong delate" bindtap="handledelate"></view>
+    </view>
+    <view class="history-list">
+      <view wx:for="{{historydata}}" wx:key="index" bindtap="handletosearch" data-content="{{item}}">{{item}}</view>
+    </view>
+  </view>
+  <view class="hot">
+    <view class="h3">
+      <text>热门搜索</text>
+    </view>
+    <view class="list">
+      <view wx:for="{{listdata}}" wx:key="index" class="list-item">
+        <text class="index {{index===0?'first':''}} {{index===1?'secend':''}} {{index===2?'thrid':''}}">{{index+1}}</text>
+        <text class="list-content">{{item.display_word}}</text>
+        <text class="iconfont {{item.shift===1?'icon-shangsheng':''}} {{item.shift===-1?'icon-xiajiang':''}} {item.shift===0?'icon-chiping':''}} {{item.shift===1?'shangsheng':''}} {{item.shift===-1?'xiajiang':''}} {item.shift===0?'chiping':''}} icon-size"></text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="searchdata-list" wx:if="{{searchdata!==''}}" >
+  <view class="nav-bar">
+    <view >专辑</view>
+    <view >主播</view>
+    <view >声音</view>
+  </view>
+  <view class="total-box">
+    <view class="total">
+      共
+      <view class="total-msg">
+        {{searchdata.albumViews.total}}
+      </view>
+      个搜索结果
+    </view>
+    <view class="sort">
+      |
+      <view class="iconfont icon-sangang iconsort"></view>
+      排序
+    </view>
+  </view>
+
+  <Album searchdata="{{searchdata}}" ></Album>
+
+
+</view>

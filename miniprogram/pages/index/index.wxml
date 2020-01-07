@@ -1,4 +1,12 @@
-<view>
-  首页
+<view class='index-searchbox'>
+  <i class="iconfont icon-sousuo"></i>
+  <text>搜索你想听的节目</text>
 </view>
- 
+<!-- 轮播图组件 -->
+<x-swiper />
+<!-- 按钮组件 -->
+<x-menuList />
+<!-- 推荐组件 -->
+<x-star />
+<!-- 分类列表组件 -->
+<x-category />

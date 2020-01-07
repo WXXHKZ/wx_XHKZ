@@ -14,6 +14,20 @@ App({
         traceUser: true,
       })
     }
+    var logs = wx.getStorageSync('log') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+    // 是否第一次登录
+    var fir = wx.getStorageSync('fir')
+    if(fir === 1) {
+      wx.getUserInfo({
+        success: function(res) {
+          console.log('app',res)
+        }
+      })
+    } else {
+      console.log("app"+ 0)
+    }
     this.globalData = {}
     this.skin()
   },
@@ -21,12 +35,29 @@ App({
     userInfo: null,
     skin: 'normal',
     skinSwitch: '',
+    appid: "",
+    appsecret: "",
+  },
+  getLocationInfo: function(cb) {
+    var that = this
+    if (this.globalData.locationInfo){
+      cb(this.globalData.locationInfo)
+    } else {
+      wx.getLocation({
+        type: 'gcj02',
+        success: function (res) {
+          console.log(res)
+          that.globalData.locationInfo = res
+          cb(that.globalData.locationInfo)
+        },
+      })
+    }
   },
   // 日间模式 tabBar
   setSunTabBar: function() {
     wx.setTabBarStyle({
-      color: '#d8d8d8',
-      selectedColor: '#f86442',
+      color: '#999999',
+      selectedColor: '#f86543',
       backgroundColor: '#fff',
       borderStyle: 'white'
     })
@@ -34,8 +65,8 @@ App({
   // 夜间模式 tabBar
   setNightTabBar: function () {
     wx.setTabBarStyle({
-      color: '#646566',
-      selectedColor: '#954c3c',
+      color: '#6f6f6f',
+      selectedColor: '#a44f3c',
       backgroundColor: '#313335',
       borderStyle: 'white'
     })

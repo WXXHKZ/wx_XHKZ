@@ -1,41 +1,66 @@
 /* pages/profile/profile.wxss */
 @import '/iconFont/iconFont-lizz.wxss';
+/* 上半 */
+.top{
+  background: #fff;
+}
 .top>view{
   line-height: 100rpx;
   height: 100rpx;
-}
-.top{
-  background: #fff;
-  padding: 0 20rpx;
 }
 .user{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 40rpx;
 }
 .right{
   color: #c7c7cc;
-  font-size: 36rpx;
+  font-size: 20rpx;
+  font-family: "隶书";
+  font-weight: 800;
 }
 .user .serve{
-  font-size: 24rpx;
+  font-size: 28rpx;
+  line-height: 72rpx;
+  border-radius: 80rpx;
+  padding: 0 20rpx;
+  background: #f4f4f4;
+  color: #333;
+}
+.user .serve .iconfont{
+  color: #353535;
+  padding: 0 12rpx;
 }
 .user .left text{
   font-size: 36rpx;
+  line-height: 72rpx;
+}
+/* 左边 left */
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .left text{
   margin: 0 30rpx;
-  font-size: 32rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+.iconfont{
+  font-size: 30rpx;
 }
 .sign{
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10rpx;
+  padding: 0 52rpx;
 }
+/* 下半 */
 .main{
   background: #fff;
-  padding: 0 20rpx;
+  padding: 0 52rpx;
 }
 .main >view{
   display: flex;
@@ -43,4 +68,22 @@
   justify-content: space-between;
   line-height: 100rpx;
   height: 100rpx;
+}
+
+/* 登录 */
+#login>view button{
+  width: 80vw;
+  line-height: 60rpx;
+  margin: 20rpx auto;
+  border-radius: 60rpx;
+  text-align: center;
+}
+#login .wChat button{
+  background: greenyellow;
+  color: #fff;
+}
+#login .phone button{
+  background: #fff;
+  color: greenyellow;
+  border:  1rpx solid greenyellow;
 }

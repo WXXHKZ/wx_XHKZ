@@ -7,7 +7,8 @@ Page({
    */
   data: {
     skinStyle: '',
-    skinSwitch: ''
+    skinSwitch: '',
+    isHide: true,
   },
 
   /** 切换模式 **/
@@ -46,11 +47,36 @@ Page({
    */
   onLoad: function (options) {
     app.setNavBarBg()
-    console.log(app.globalData.skin)
     this.setData({
       skinStyle: app.globalData.skin,
       skinSwitch: app.globalData.skinSwitch
     }) 
+    // 是否第一次进入
+    var fir = wx.getStorageSync('fir')
+    console.log(fir)
+    if (fir === 1) {
+      wx.getUserInfo({
+        success: function (res) {
+          console.log(res)
+        }
+      })
+    } else {
+      console.log("p",0)
+    }
+  },
+
+  bindGetUserInfo: function(e) {
+    if(e.detail.userInfo) {
+      var that = this
+      let user = e.detail.userInfo
+      // 用户信息
+      console.log(e.detail.userInfo)
+    } else {
+      wx.showModal({
+        title: '警告',
+        content: '拒绝授权',
+      })
+    }
   },
 
   /**

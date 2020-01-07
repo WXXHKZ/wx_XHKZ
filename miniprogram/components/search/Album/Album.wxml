@@ -1,0 +1,25 @@
+<!--components/search/Album/Album.wxml-->
+<view class="scroll-box">
+  <view wx:for="{{searchdata.albumViews.albums}}" wx:key="index" class="list-box">
+    <view class="li-item">
+      <view class="image-box">
+        <image mode="widthFix" src="{{item.albumInfo.cover_path}}" alt="" />
+      </view>
+      <view class="li-content">
+        <view class="title">{{item.albumInfo.title}}</view>
+        <view class="intro">{{item.albumInfo.intro}}</view>
+        <view class="other-box">
+          <view class="other-msg">
+            <view class="iconfont icon-erji icon-1"></view>
+            {{item.albumInfo.play}}
+          </view>
+          <view class="other-msg">
+            <view class="iconfont icon-yinpin icon-1"></view>
+            {{item.albumInfo.tracks}}集
+          </view>
+        </view>
+      </view>
+      <view class="iconfont icon-bofang1 play-btn"></view>
+    </view>
+  </view>
+</view>

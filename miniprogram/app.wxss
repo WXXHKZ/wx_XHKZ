@@ -1,5 +1,7 @@
 @import "style/skin.wxss";
 /**app.wxss**/
+@import './iconFont/iconFont-panghao.wxss';
+@import './iconFont/iconFont-chenxuejing.wxss';
 .container {
   display: flex;
   flex-direction: column;
@@ -21,10 +23,11 @@ button::after{
 
 
 page {
-  background: #f6f6f6;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  height: 100%;
 }
 
 .userinfo, .uploader, .tunnel {
