@@ -1,25 +1,27 @@
-<!--components/search/Album/Album.wxml-->
+<!--components/search/Voice/Voice.wxml-->
 <scroll-view class="scroll-box" style="height: 900rpx;" scroll-y="true" bindscrolltolower="handlescrollbottom">
-  <view wx:for="{{datalist}}" wx:key="index" class="list-box">
+
+ <view wx:for="{{datalist}}" wx:key="index" class="list-box">
     <view class="li-item">
       <view class="image-box">
-        <image mode="widthFix" src="{{item.albumInfo.cover_path}}" alt="" />
+        <image mode="widthFix" src="{{item.trackInfo.album_cover_path}}" alt="" />
       </view>
       <view class="li-content">
-        <view class="title">{{item.albumInfo.title}}</view>
-        <view class="intro">{{item.albumInfo.intro}}</view>
+        <view class="title">{{item.trackInfo.title}}</view>
+        <view class="intro">{{item.trackInfo.nickname}}</view>
         <view class="other-box">
           <view class="other-msg">
             <view class="iconfont icon-erji icon-1"></view>
-            {{item.albumInfo.play}}
+            {{item.trackInfo.count_play}}
           </view>
           <view class="other-msg">
             <view class="iconfont icon-yinpin icon-1"></view>
-            {{item.albumInfo.tracks}}集
+            {{item.trackInfo.count_share}}集
           </view>
         </view>
       </view>
       <view class="iconfont icon-bofang1 play-btn"></view>
     </view>
   </view>
+
 </scroll-view>
