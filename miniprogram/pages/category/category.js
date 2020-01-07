@@ -38,7 +38,7 @@ Page({
     // wx.navigateTo({
     //   url: `/pages/cateContent/cateContent`,
     // })
-    console.log(e)
+    console.log(e.currentTarget.dataset)
   },
   /**
    * 生命周期函数--监听页面加载

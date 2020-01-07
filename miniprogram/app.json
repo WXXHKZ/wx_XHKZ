@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/category/category",
+    "pages/cateContent/cateContent",
     "pages/index/index",
+    "pages/category/category",
     "pages/find/find",
     "pages/collection/collection",
     "pages/profile/profile",
-    "pages/search/search",
-    "pages/cateContent",
-    "pages/cateContent/cateContent"
+    "pages/search/search"
+    
   ],
   "window": {
     "backgroundColor": "#fff",

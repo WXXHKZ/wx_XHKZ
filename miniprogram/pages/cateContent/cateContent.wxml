@@ -1,2 +1,3 @@
 <!--miniprogram/pages/cateContent/cateConetnt.wxml-->
-<text>miniprogram/pages/cateContent/cateConetnt.wxml</text>
+<text  class="cc-menu">
+</text>
