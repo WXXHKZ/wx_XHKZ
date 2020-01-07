@@ -1,7 +1,7 @@
-
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
+    this.checkUpdate()
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -14,8 +14,53 @@ App({
         traceUser: true,
       })
     }
-    this.globalData = {}
+    this.getOpenid()
+    this.globalData = {
+      playingMusicId: -1,
+      openId: -1
+    }
     this.skin()
+  },
+  getOpenid() {
+    wx.cloud.callFunction({
+      name: 'login'
+    }).then((res) => {
+      const openid = res.result.openid
+      this.globalData.openId = openid
+      if (!wx.getStorageSync(openid)) {
+        wx.setStorage({
+          key: openid,
+          data: [],
+        })
+      }
+    })
+  },
+
+  checkUpdate() {
+    const updateManager = wx.getUpdateManager()
+    // 检测版本更新
+    updateManager.onCheckForUpdate((res) => {
+      if (res.hasUpdate) {
+        updateManager.onUpdateReady(() => {
+          wx.showModal({
+            title: '更新提示',
+            content: '新版本已经准备好,是否重启应用',
+            success(res) {
+              if (res.confirm) {
+                updateManager.applyUpdate()
+              }
+            }
+          })
+        })
+      }
+    })
+  },
+
+  setPlayMusicId(musicId) {
+    this.globalData.playingMusicId = musicId
+  },
+  getPlayMusicId() {
+    return this.globalData.playingMusicId
   },
   globalData: {
     userInfo: null,
@@ -32,7 +77,7 @@ App({
     })
   },
   // 夜间模式 tabBar
-  setNightTabBar: function () {
+  setNightTabBar: function() {
     wx.setTabBarStyle({
       color: '#646566',
       selectedColor: '#954c3c',
@@ -59,7 +104,7 @@ App({
     })
   },
   //导航栏标题背景
-  setNavBarBg: function () {
+  setNavBarBg: function() {
     var that = this
     if (that.globalData.skin == "normal") {
       that.setSkinNormalTitle()
@@ -67,16 +112,16 @@ App({
       that.setSkinBlackTitle()
     }
   },
-  setSkinBlackTitle: function () {
+  setSkinBlackTitle: function() {
     wx.setNavigationBarColor({
       frontColor: '#ffffff',
       backgroundColor: '#313335',
     })
   },
-  setSkinNormalTitle: function () {
+  setSkinNormalTitle: function() {
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#ffffff',
     })
-  },   
+  },
 })
