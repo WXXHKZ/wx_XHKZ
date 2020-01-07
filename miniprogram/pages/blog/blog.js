@@ -61,7 +61,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.scene)
+    // console.log(options.scene)
     this._loadBlogList()
   },
 
@@ -82,7 +82,6 @@ Page({
       this.setData({
         blogList: [...this.data.blogList, ...res.result]
       })
-      console.log(this.data.blogList)
       wx.hideLoading()
       wx.stopPullDownRefresh()
     })
