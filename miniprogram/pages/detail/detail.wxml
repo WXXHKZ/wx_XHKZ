@@ -1,0 +1,35 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <view class="bg-box">
+    <image src="https://imagev2.xmcdn.com/group50/M00/48/C5/wKgKmVvvmKCRMK-JAAF-6QUkwdE602.jpg" alt=""></image> 
+  </view>
+
+  <view class="main-msg">
+    <view class="img-box">
+      <image class="img1" src="https://imagev2.xmcdn.com/group50/M00/48/C5/wKgKmVvvmKCRMK-JAAF-6QUkwdE602.jpg" alt="" />
+      <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt="" />
+      <view class="play-num">
+        <view class="iconfont icon-erji"></view>
+        <view>11.36亿</view>
+      </view>
+    </view>
+    <view class="mgs-box">
+      <view class="h3">
+        王的女人谁敢动｜爆笑古言穿越（一刀苏苏双播免费）
+      </view>
+      <view class="anchor">
+        <view>
+          <image src="https://imagev2.xmcdn.com/group66/M09/52/C4/wKgMa11j5gWgUw7zAAH0SswotdQ632.jpg" alt="" />
+        </view>
+        <view>
+          一刀苏苏
+        </view>
+      </view>
+      <view class="order-box">
+        <view>已订阅131.60万人</view>
+        <view>+免费订阅</view>
+      </view>
+    </view>
+  </view>
+
+</view>
