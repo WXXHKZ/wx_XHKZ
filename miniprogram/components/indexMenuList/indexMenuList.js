@@ -48,6 +48,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleTapNav(e){
+      console.log(e)
+      const ds = e.currentTarget.dataset
+      if(ds.id === '5'){
+        wx.navigateTo({
+          url: `/pages/playlist/playlist`,
+        })
+      }
+    }
   }
 })
