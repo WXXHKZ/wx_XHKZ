@@ -1,0 +1,28 @@
+<!--pages/blog/blog.wxml-->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="publish-container" bind:tap="onPublish">
+      <i class="iconfont icon-05"></i>
+    </view>
+    <view class="search-container">
+      <!-- 组件内部无法调用全局样式,解决方法2:在此处给组件传递 -->
+      <c-search iconfont="iconfont" bind:search="onSearch" icon-sousuo="icon-sousuo" />
+    </view>
+  </view>
+
+  <!-- 博客卡片列表 -->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <c-blog-card data-blogid="{{item._id}}"  bind:tap="goComment" blog="{{item}}" />
+        <c-blog-ctrl blog="{{item}}" blogId="{{item._id}}" />
+      </view>
+    </block>
+  </view>
+
+  <!-- 底部弹出层 -->
+  <c-login modalShow="{{modalShow}}" bind:loginSucc="onLoginSucc" bind:loginFail="onLoginFail">
+
+  </c-login>
+</view>

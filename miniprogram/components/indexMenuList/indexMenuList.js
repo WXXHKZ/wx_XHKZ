@@ -49,7 +49,6 @@ Component({
    */
   methods: {
     handleTapNav(e) {
-      console.log(e)
       const ds = e.currentTarget.dataset
       if (ds.id === '1') {
         wx.navigateTo({
