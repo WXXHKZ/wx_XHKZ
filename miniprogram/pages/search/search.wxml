@@ -4,7 +4,8 @@
     <input type="text" placeholder="搜索你想听的节目" bindinput="handleinput" value="{{value}}" bindconfirm="handlesearch"></input>
     <text class="iconfont icon-shanchu iconsize" wx:if="{{value!==''}}" bindtap="handleclear"></text>
   </view>
-  <text class="btn-quxiao">取消</text>
+  <text class="btn-quxiao" wx:if="{{value===''}}" bindtap="handletohome">取消</text>
+  <text class="btn-quxiao" wx:if="{{value!==''}}" bindtap="handlequeding">确定</text>
 </view>
 
 
