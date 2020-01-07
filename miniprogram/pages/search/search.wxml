@@ -34,15 +34,30 @@
 
 <view class="searchdata-list" wx:if="{{searchdata!==''}}" >
   <view class="nav-bar">
-    <view >专辑</view>
-    <view >主播</view>
-    <view >声音</view>
+    <view bindtap="handlechange" data-order="1"> 
+      <text>专辑</text>
+      <text class="{{showSign==='1'?'i':'span'}}"></text>
+    </view>
+    <view bindtap="handlechange" data-order="2">
+      <text>主播</text>
+      <text class="{{showSign==='2'?'i':'span'}}"></text>
+    </view>
+    <view bindtap="handlechange" data-order="3">
+      <text>声音</text>
+      <text class="{{showSign==='3'?'i':'span'}}"></text>
+    </view>
   </view>
   <view class="total-box">
     <view class="total">
       共
-      <view class="total-msg">
+      <view class="total-msg" wx:if="{{showSign==='1'}}">
         {{searchdata.albumViews.total}}
+      </view>
+      <view class="total-msg" wx:if="{{showSign==='2'}}">
+        {{anchordata.userViews.total}}
+      </view>
+      <view class="total-msg" wx:if="{{showSign==='3'}}">
+        {{voicedata.trackViews.total}}
       </view>
       个搜索结果
     </view>
@@ -53,7 +68,9 @@
     </view>
   </view>
 
-  <Album searchdata="{{searchdata}}" ></Album>
+  <Album searchdata="{{searchdata}}" value="{{value}}"  wx:if="{{showSign==='1'}}"></Album>
+  <Anchor anchordata="{{anchordata}}" value="{{value}}" wx:if="{{showSign==='2'}}"></Anchor>
+  <Voice voicedata="{{voicedata}}" value="{{value}}" wx:if="{{showSign==='3'}}"></Voice>
 
 
 </view>
