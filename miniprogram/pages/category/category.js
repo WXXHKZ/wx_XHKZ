@@ -10,6 +10,11 @@ Page({
   activeClick(e){
     console.log(e.currentTarget.dataset.item)
   },
+  handleSearch() {
+    wx.navigateTo({
+      url: `/pages/search/search`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

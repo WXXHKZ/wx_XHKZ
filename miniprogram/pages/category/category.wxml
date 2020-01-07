@@ -1,10 +1,9 @@
 <!--pages/category/category.wxml-->
 <view class="category">
-  <view class="searchbox">
-    <view class="searchIn">
-      搜索你想听的节目
-    </view>
-  </view>
+  <view bindtap="handleSearch" class='index-searchbox'>
+  <i class="iconfont icon-sousuo"></i>
+  <text>搜索你想听的节目</text>
+</view>
   <view class="ca-content">
     <view class="menu-fill">
     </view>
