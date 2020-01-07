@@ -5,11 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    menuList:[]
+    menuList:[],
+    activeBtn:'book',
+    toView: 'book',
+    activeIndex:0
   },
   activeClick(e){
-    console.log(e.currentTarget.dataset.item)
+   
+    this.setData({
+      activeBtn: e.currentTarget.dataset.item,
+      toView: e.currentTarget.dataset.item,
+      activeIndex: e.currentTarget.dataset.index
+    })
   },
+  scroll(e) {
+    console.log(e.detail.scrollHeight)
+    let clientX = (e.detail.scrollHeight-400)/this.data.menuList.length
+    let index = Math.floor(e.detail.scrollTop / clientX)
+    
+    if(index<27){
+    
+     this.setData({
+       activeBtn: this.data.menuList[index].category.name
+     })
+    }
+     
+    
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -22,6 +45,13 @@ Page({
         })
       }
     })
+    // const query = wx.createSelectorQuery()
+    // query.select('.cate-show').boundingClientRect()
+    // query.selectViewport().scrollOffset()
+    // query.exec(function (res) {
+    //   res[0].top       // #the-id节点的上边界坐标
+    //   res[1].scrollTop = 100 // 显示区域的竖直滚动位置
+    // })
   },
 
   /**

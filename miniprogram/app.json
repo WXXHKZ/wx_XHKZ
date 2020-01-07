@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/playlist/playlist",
     "pages/category/category",
     "pages/find/find",
     "pages/collection/collection",
     "pages/profile/profile",
-    "pages/search/search",
-    "pages/playlist/playlist"
+    "pages/search/search"
   ],
   "window": {
     "backgroundColor": "#fff",
