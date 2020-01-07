@@ -5,9 +5,10 @@
   </view>
 
   <view class="main-msg">
+    <view class="iconfont icon-right"></view>
     <view class="img-box">
-      <image class="img1" src="https://imagev2.xmcdn.com/group50/M00/48/C5/wKgKmVvvmKCRMK-JAAF-6QUkwdE602.jpg" alt="" />
-      <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt="" />
+      <image class="img1" src="https://imagev2.xmcdn.com/group50/M00/48/C5/wKgKmVvvmKCRMK-JAAF-6QUkwdE602.jpg" alt="" ></image>
+      <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt=""></image>
       <view class="play-num">
         <view class="iconfont icon-erji"></view>
         <view>11.36亿</view>
@@ -22,12 +23,22 @@
           <image src="https://imagev2.xmcdn.com/group66/M09/52/C4/wKgMa11j5gWgUw7zAAH0SswotdQ632.jpg" alt="" />
         </view>
         <view>
-          一刀苏苏
+          一刀苏苏 
+          <view class="iconfont icon-right1"></view>
         </view>
       </view>
       <view class="order-box">
-        <view>已订阅131.60万人</view>
-        <view>+免费订阅</view>
+        <text>131.60万人收藏|已更新861期</text>
+        <view class="btn-box">
+          <view class="btn-share">
+            <view class="iconfont icon-fenxiang"></view>
+            分享
+          </view>
+          <view class="btn-collection">
+            <view class="iconfont icon-jia"></view>
+            收藏
+          </view>
+        </view>
       </view>
     </view>
   </view>

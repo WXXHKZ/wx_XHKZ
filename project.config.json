@@ -52,8 +52,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "blog",
-					"pathName": "pages/blog/blog",
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
 					"scene": null
 				}
 			]
