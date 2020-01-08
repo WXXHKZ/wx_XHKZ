@@ -1,0 +1,25 @@
+.comment-repalce{
+  width: 100%;
+  background: #eee;
+  margin-bottom: 20rpx;
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.comment-repalce-li{
+  flex: 1;
+  padding:10rpx 20rpx;
+  font-size: 24rpx;
+}
+
+.nickname{
+  color: rgb(4, 0, 255);
+}
+
+.other-repalce{
+  font-size: 24rpx;
+  color: rgb(4, 0, 255);
+  padding:10rpx 20rpx;
+}

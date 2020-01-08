@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Reply":"../../components/detail/Reply/Reply"
+  },
+  "navigationBarTitleText": "详情paly"
+}
