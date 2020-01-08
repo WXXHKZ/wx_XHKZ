@@ -2,6 +2,7 @@ page {
   width: 100%;
   position: relative;
   height: max-content;
+  overflow: hidden;
 }
 
 .bg-box {
@@ -31,7 +32,7 @@ page {
   display: flex;
 }
 
-.icon-right{
+.icon-right {
   position: absolute;
   top: 70rpx;
   font-weight: 700;
@@ -151,6 +152,93 @@ page {
   background: red;
   border: 1px solid red;
 }
-.icon-jia{
-  font-size:20rpx;
+
+.icon-jia1 {
+  font-size: 22rpx;
+}
+
+/***********************/
+
+.palylist-box {
+  position: absolute;
+  top: 480rpx;
+  background: #fff;
+  z-index: 99;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.playlist-title {
+  padding:40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-right {
+  display: flex;
+}
+
+.playlist-palyall {
+  display: flex;
+  align-items: center;
+}
+
+.playlist-sort {
+  display: flex;
+  margin-right: 40rpx;
+  align-items: center;
+  color: #666;
+}
+
+.playlist-change {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.scroll-box{
+  height:800rpx;
+}
+
+.list-li {
+  padding-top: 20rpx;
+  display: flex;
+  border-bottom: 1rpx solid #f5f5f5;
+  justify-content: space-between;
+}
+
+.li-index{
+  font-size: 36rpx;
+  color: #666;
+  margin: 40rpx;
+}
+.li-time{
+  width: 66rpx; 
+  font-size: 22rpx;
+  color: #666;
+  margin: 0 20rpx 0 60rpx;
+}
+.li-content{
+  flex: 1;
+}
+.li-p{
+  display: flex;
+  margin:30rpx 0 20rpx;
+  font-size: 22rpx;
+}
+.li-playCount{
+  display: flex;
+  align-items: center;
+  margin-right:40rpx;
+}
+.li-duration{
+  display: flex;
+  align-items: center;
+}
+.icon-shijian{
+  font-size: 22rpx;
+  margin-right: 10rpx;
+}
+.icon-pause{
+  font-size: 22rpx;
+  margin-right: 10rpx;
 }
