@@ -1,8 +1,6 @@
 {
   "pages": [
-    
     "pages/index/index",
-    
     "pages/playlist/playlist",
     "pages/category/category",
     "pages/blog/blog",
@@ -10,6 +8,7 @@
     "pages/profile/profile",
     "pages/search/search",
     "pages/cateContent/cateContent",
+    "pages/detail/detail",
     "pages/blog-edit/blog-edit",
     "pages/blog-comment/blog-comment",
     "pages/musiclist/musiclist",

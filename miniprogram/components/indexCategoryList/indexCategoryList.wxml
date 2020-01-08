@@ -1,5 +1,5 @@
 <view class="cateList">
-  <view wx:for="{{categoryList}}" wx:key="id" class="cateItem">
+  <view wx:for="{{categoryList}}" wx:key="id" class="cateItem" data-val="{{item}}" bindtap="goToDetail">
     <view class="itemImgBox">
       <image class="cateItemImg" mode="widthFix" src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}"></image>
     </view>

@@ -1,5 +1,5 @@
 <!--components/search/Anchor/Anchor.wxml-->
-<scroll-view class="scroll-box" style="height: 900rpx;" scroll-y="true" bindscrolltolower="handlescrollbottom">
+<scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom">
 
  <view wx:for="{{datalist}}" wx:key="index" class="list-box">
     <view class="li-item">
