@@ -1,5 +1,5 @@
 <!--components/search/Voice/Voice.wxml-->
-<scroll-view class="scroll-box" style="height: 900rpx;" scroll-y="true" bindscrolltolower="handlescrollbottom">
+<scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom">
 
  <view wx:for="{{datalist}}" wx:key="index" class="list-box">
     <view class="li-item">
@@ -15,8 +15,8 @@
             {{item.trackInfo.count_play}}
           </view>
           <view class="other-msg">
-            <view class="iconfont icon-yinpin icon-1"></view>
-            {{item.trackInfo.count_share}}集
+            <view class="iconfont icon-shijian icon-1"></view>
+            {{item.trackInfo.duration}}
           </view>
         </view>
       </view>

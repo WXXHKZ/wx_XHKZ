@@ -1,4 +1,4 @@
-<swiper autoplay="true" bindchange="swiper" easing-function="linear" indicator-active-color="#fff" indicator-color="#999" indicator-dots="true" interval="3000" duration="500" circular="true">
+<swiper class="mySwiper" autoplay="true" bindchange="swiper" easing-function="linear" indicator-active-color="#fff" indicator-color="#999" indicator-dots="true" interval="3000" duration="500" circular="true">
   <block wx:for="{{swiperImgUrls}}" wx:key="url" wx:for-index="i">
     <swiper-item class="index-swiper">
       <!-- image 的mode属性 scaleToFill(缩放,但不等比,让图片完全填满image容器) aspectFit(宽度填满容器) widthFix(缩放,等比缩放)-->

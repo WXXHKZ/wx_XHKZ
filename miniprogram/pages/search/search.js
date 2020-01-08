@@ -89,7 +89,6 @@ Page({
         this.setData({
           anchordata: res.data.data
         })
-        console.log(res)
       }
     })
 

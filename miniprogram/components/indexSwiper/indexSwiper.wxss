@@ -1,14 +1,19 @@
+.mySwiper{
+  height: 300rpx !important;
+}
+
 .index-swiper{
   width: 100%;
   padding: 0 20rpx;
   box-sizing: border-box;
-  border-radius: 20rpx;
-  overflow: hidden;
+  /* border-radius: 20rpx; */
+  /* overflow: hidden; */
+  /* height: max-content; */
 }
 
 .swiperImg{
   width: 100%;
-  height: 100%;
+  height: 300rpx !important;
   border-radius: 20rpx;
   transform: scale(0.8);
   transition: 0.4s
@@ -16,7 +21,7 @@
 
 .active.swiperImg{
   width: 100%;
-  height: 100%;
+  height: 300rpx !important;
   border-radius: 20rpx;
   transform: scale(1);
   transition: 0.4s;
