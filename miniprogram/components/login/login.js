@@ -19,15 +19,15 @@ Component({
    */
   methods: {
     onGotUserInfo(event) {
-      console.log(event)
+      // console.log(event)
       const userInfo = event.detail.userInfo
-      console.log(1)
+      // console.log(1)
       // 允许授权
       if (userInfo) {
         this.setData({
           modalShow: false
         })
-        console.log(userInfo)
+        // console.log(userInfo)
         this.triggerEvent('loginSucc', userInfo)
       } else {
         this.triggerEvent('loginFail')
