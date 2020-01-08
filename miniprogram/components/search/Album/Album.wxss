@@ -1,10 +1,5 @@
 @import '../../../iconFont/iconFont-chenxuejing.wxss';
 
-.scroll-box {
-  height: 900rpx;
-  overflow: scroll;
-}
-
 .list-box {
   padding: 0 20rpx;
 }

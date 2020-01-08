@@ -1,13 +1,23 @@
 {
   "pages": [
-    "pages/cateContent/cateContent",
+    
     "pages/index/index",
+    
+    "pages/playlist/playlist",
     "pages/category/category",
-    "pages/find/find",
+    "pages/blog/blog",
     "pages/collection/collection",
     "pages/profile/profile",
-    "pages/search/search"
-    
+    "pages/search/search",
+    "pages/cateContent/cateContent",
+    "pages/blog-edit/blog-edit",
+    "pages/blog-comment/blog-comment",
+    "pages/musiclist/musiclist",
+    "pages/player/player"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+
   ],
   "window": {
     "backgroundColor": "#fff",
@@ -33,7 +43,7 @@
         "selectedIconPath": "images/cate-active.png"
       },
       {
-        "pagePath": "pages/find/find",
+        "pagePath": "pages/blog/blog",
         "text": "发现",
         "iconPath": "images/find.png",
         "selectedIconPath": "images/find-active.png"

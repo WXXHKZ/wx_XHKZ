@@ -1,3 +1,31 @@
 <!--miniprogram/pages/cateContent/cateConetnt.wxml-->
-<text  class="cc-menu">
-</text>
+<view class="cateContent">
+<view class="cc-title">
+  <view class="cc-menu">
+    <view class="menu-ul">
+      <view class="menu-item menuActive">全部</view>
+      <view wx:for="{{menuList}}" wx:for-index="idx" wx:if="{{idx<6}}" class="menu-item">{{item.metaDataValue}}</view>
+    </view>
+  </view>
+  <view class="arrow-btn">
+    >
+  </view>
+</view>
+<scroll-view scroll-y  class="list-container">
+    <view wx:for="{{listView}}" class="list-view">
+      <image src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}!op_type=3&columns=144&rows=144&magick=webp"></image>
+      <view class="list-content">
+        <view class="list-title">{{item.albumInfo.title}}</view>
+        <view class="list-subtitle">{{item.albumInfo.shortIntro}}</view>
+        <view class="list-count">
+            <text class="count1">{{"<i>"}}{{item.statCountInfo.trackCount}}</text>
+            <text class="count2">{{"<i>"}}{{item.statCountInfo.playCount/10000}}万</text>
+        </view>
+        
+    </view>
+     
+    <view class="list-border"></view>
+     </view>
+</scroll-view>
+</view>
+  

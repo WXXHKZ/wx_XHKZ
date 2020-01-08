@@ -27,19 +27,22 @@ Page({
       })
     }
 
-
   },
+
+
   handleSearch() {
     wx.navigateTo({
       url: `/pages/search/search`,
     })
   },
-  handleSkip(e){
-    // wx.navigateTo({
-    //   url: `/pages/cateContent/cateContent`,
-    // })
+
+  handleSkip(e) {
+    wx.navigateTo({
+      url: `/pages/cateContent/cateContent?itemCode=${e.currentTarget.dataset.itemcode}&textCode=${e.currentTarget.dataset.textcode}`,
+    })
     console.log(e.currentTarget.dataset)
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -52,13 +55,6 @@ Page({
         })
       }
     })
-    // const query = wx.createSelectorQuery()
-    // query.select('.cate-show').boundingClientRect()
-    // query.selectViewport().scrollOffset()
-    // query.exec(function (res) {
-    //   res[0].top       // #the-id节点的上边界坐标
-    //   res[1].scrollTop = 100 // 显示区域的竖直滚动位置
-    // })
   },
 
   /**

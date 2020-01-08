@@ -120,9 +120,33 @@ page{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:20rpx;
+  padding-top:20rpx;
   border-bottom: 1px solid #f5f5f5;
 }
+.nav-bar>view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-bar>view .i{
+  height: 4rpx;
+  width: 50rpx;
+  background: orangered;
+  margin-top:18rpx;
+}
+.nav-bar>view .span{
+  height: 4rpx;
+  width: 50rpx;
+  background: white;
+  margin-top:18rpx;
+}
+
+
+
+
+
+
 .total-box{
   display: flex;
   justify-content: space-between;

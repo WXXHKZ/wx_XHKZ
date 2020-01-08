@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "Album":"../../components/search/Album/Album"
+    "Album":"../../components/search/Album/Album",
+    "Anchor":"../../components/search/Anchor/Anchor",
+    "Voice":"../../components/search/Voice/Voice"
   },
   "navigationBarTitleText": "搜索"
 }
