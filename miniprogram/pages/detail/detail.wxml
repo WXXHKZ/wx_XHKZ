@@ -5,7 +5,7 @@
   </view>
 
   <view class="main-msg">
-    <view class="iconfont icon-right" bindtap="handletohome"></view>
+    <!-- <view class="iconfont icon-right" bindtap="handleback"></view> -->
     <view class="img-box">
       <image class="img1" src="https://imagev2.xmcdn.com/{{maindata.albumDetailInfo.albumInfo.cover}}" alt=""></image>
       <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt=""></image>
@@ -53,23 +53,26 @@
       </view>
       <view class="playlist-right">
         <view class="playlist-sort">
-        <view class="iconfont icon-paixu"></view>
-        <view>
-          正序
+          <view class="iconfont icon-paixu"></view>
+          <view>
+            正序
+          </view>
+        </view>
+        <view class="playlist-change">
+          <view class="iconfont icon-xuanji"></view>
+          <view>
+            选集
+          </view>
         </view>
       </view>
-      <view class="playlist-change">
-        <view class="iconfont icon-xuanji"></view>
-        <view>
-          选集
-        </view>
-      </view>
-      </view> 
     </view>
-    <scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom" >
-      <view class="list-li" wx:for="{{playlistdata}}" wx:key="id">
+    <scroll-view class="scroll-box" scroll-y="true" bindscrolltolower="handlescrollbottom">
+      <view class="list-li" wx:for="{{playlistdata}}" wx:key="id" 
+      bindtap="handletoplay"
+      data-albumInfoid="{{item.id}}" 
+      data-anchorInfoid="{{anchordata.id}}">
         <view class="li-index">{{index+1}}</view>
-        <view class="li-content">
+        <view class="li-content" >
           <view class="li-h4">
             {{item.trackInfo.title}}
           </view>
@@ -77,16 +80,16 @@
             <view class="li-playCount">
               <view class="iconfont icon-pause"></view>
               <view>
-              {{item.statCountInfo.playCount}}
+                {{item.statCountInfo.playCount}}
               </view>
             </view>
             <view class="li-duration">
               <view class="iconfont icon-shijian"></view>
               <view>
-              {{item.trackInfo.duration}}
+                {{item.trackInfo.duration}}
               </view>
             </view>
-          </view> 
+          </view>
         </view>
         <view class="li-time">{{item.trackInfo.createdAt}}</view>
       </view>

@@ -1,7 +1,7 @@
 <!--components/search/Voice/Voice.wxml-->
 <scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom">
 
- <view wx:for="{{datalist}}" wx:key="index" class="list-box">
+ <view wx:for="{{datalist}}" wx:key="index" class="list-box" bindtap="handletodetailplay" data-albumInfoId="{{item.trackInfo.id}}" data-anchorInfoId="{{item.trackInfo.uid}}">
     <view class="li-item">
       <view class="image-box">
         <image mode="widthFix" src="{{item.trackInfo.album_cover_path}}" alt="" />

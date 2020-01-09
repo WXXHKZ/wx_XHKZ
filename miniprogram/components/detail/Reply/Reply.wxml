@@ -1,0 +1,24 @@
+<view class="comment-repalce" wx:if="{{commentdata.replies.length>0&&morerepalce.length===0}}">
+  <view class="comment-repalce-li" wx:for="{{commentdata.replies}}" wx:key="id">
+    <text class="nickname"> {{item.nickname}}</text>
+    <text>回复</text>
+    <text class="nickname">{{item.parentNickname}}</text>
+    <text class="repalce-msg"> : {{item.content}}</text>
+
+  </view>
+  <view class="other-repalce" wx:if="{{commentdata.replyCount>3}}" bindtap="handleadddata" data-id="{{commentdata.id}}">
+    剩余{{commentdata.replyCount-3}}条回复
+  </view>
+</view>
+<view class="comment-repalce" wx:if="{{morerepalce.length!==0}}">
+  <view class="comment-repalce-li" wx:for="{{morerepalce}}" wx:key="id">
+    <text class="nickname"> {{item.nickname}}</text>
+    <text>回复</text>
+    <text class="nickname">{{item.parentNickname}}</text>
+    <text class="repalce-msg"> : {{item.content}}</text>
+
+  </view>
+  <view class="other-repalce" wx:if="{{commentdata.replyCount-(page*20)>20}}" bindtap="handleadddata" data-id="{{commentdata.id}}">
+    剩余{{commentdata.replyCount-(page*20)}}条回复
+  </view>
+</view>

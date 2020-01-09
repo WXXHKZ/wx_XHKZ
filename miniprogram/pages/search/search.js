@@ -19,7 +19,7 @@ Page({
    */
   onReady: function () {
     wx.request({
-      url: 'https://search.ximalaya.com/hotWordBillboard/list/2.0?categoryId=-1&size=8',
+      url: 'https://www.chenxuejing.xyz/search/hotWordBillboard/list/2.0?categoryId=-1&size=8',
       method: 'get',
       success:(res)=>{
         this.setData({
@@ -53,7 +53,7 @@ Page({
 
   handlesearch:function(e){
       wx.request({
-        url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=all&page=1&rows=20`, 
+        url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=all&page=1&rows=20`, 
         method: 'get',
         success: (res) => {
           this.setData({
@@ -73,7 +73,7 @@ Page({
       })
     }
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=track&page=1&rows=20`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=track&page=1&rows=20`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -83,7 +83,7 @@ Page({
       }
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=user&page=1&rows=20&condition=voice`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=user&page=1&rows=20&condition=voice`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -100,7 +100,7 @@ Page({
   //https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=track&page=1&rows=20
   handlequeding:function(e){
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=all&page=1&rows=20`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=all&page=1&rows=20`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -120,7 +120,7 @@ Page({
       })
     }
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=track&page=1&rows=20`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=track&page=1&rows=20`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -130,7 +130,7 @@ Page({
       }
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.data.value}&core=user&page=1&rows=20&condition=voice`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.data.value}&core=user&page=1&rows=20&condition=voice`,
       method: 'get',
       success: (res) => {
         this.setData({

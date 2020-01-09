@@ -5,38 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    maindata:'',
-    anchordata:'',
-    playCount:'',
-    subscribeCount:'',
-    playlistdata:'',
-    page:1
+    maindata: '',
+    anchordata: '',
+    playCount: '',
+    subscribeCount: '',
+    playlistdata: '',
+    page: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
     wx.request({
-      url: 'https://m.ximalaya.com/m-revision/page/album/v2/queryAlbumPage/19383749?albumCounts=track',
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/album/v2/queryAlbumPage/${this.options.albumInfoId}?albumCounts=track`,
       method: 'get',
       success: (res) => {
         this.setData({
           maindata: res.data.data,
-          playCount:this._tranNumber(res.data.data.albumDetailInfo.statCountInfo.playCount, 2),
+          playCount: this._tranNumber(res.data.data.albumDetailInfo.statCountInfo.playCount, 2),
           subscribeCount: this._tranNumber(res.data.data.albumDetailInfo.statCountInfo.subscribeCount, 2),
         })
       }
     })
     wx.request({
-      url: 'https://m.ximalaya.com/m-revision/common/user/queryUserInfo/30913215?userCountKeys=follower',
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/user/queryUserInfo/${this.options.anchorInfoId}?userCountKeys=follower`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -45,7 +45,7 @@ Page({
       }
     })
     wx.request({
-      url: 'https://m.ximalaya.com/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=19383749&page=1&pageSize=20&asc=true&countKeys=play%2Ccomment',
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=1&pageSize=20&asc=true&countKeys=play%2Ccomment`,
       method: 'get',
       success: (res) => {
         let CategoryList = res.data.data.trackDetailInfos
@@ -66,45 +66,45 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
-  
+
   _tranNumber(num, point) {
     let numStr = num.toString().split('.')[0]
     if (numStr.length < 6) {
@@ -118,25 +118,25 @@ Page({
     }
   },
 
-  _tranTime(num){
+  _tranTime(num) {
     let minute = parseInt(num / 60);
     let second = num % 60;
     let time = ''
-    if (second<10){
+    if (second < 10) {
       time = minute + ":0" + second
-    }else{
+    } else {
       time = minute + ":" + second
     }
-    
+
     return time
   },
 
-  handlescrollbottom:function(){
+  handlescrollbottom: function() {
     this.setData({
-      page: this.data.page+1
+      page: this.data.page + 1
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=19383749&page=${this.data.page}&pageSize=20&asc=true&countKeys=play%2Ccomment`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=${this.data.page}&pageSize=20&asc=true&countKeys=play%2Ccomment`,
       method: 'get',
       success: (res) => {
         let CategoryList = res.data.data.trackDetailInfos
@@ -153,9 +153,15 @@ Page({
     })
   },
 
-  handletohome: function (e) {
-    wx.reLaunch({
-      url: '../index/index',
+  handleback: function (e) {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+
+  handletoplay: function(e) {
+    wx.navigateTo({
+      url: `/pages/detailplay/detailplay?albumInfoId=${e.currentTarget.dataset.albuminfoid}&anchorInfoId=${e.currentTarget.dataset.anchorinfoid}`,
     })
   }
 

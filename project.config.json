@@ -54,18 +54,21 @@
 					"id": -1,
 					"name": "pages/detail/detail",
 					"pathName": "pages/detail/detail",
+					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "pages/search/search",
 					"pathName": "pages/search/search",
+					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "playlist",
-					"pathName": "pages/playlist/playlist",
+					"id": 2,
+					"name": "pages/detailplay/detailplay",
+					"pathName": "pages/detailplay/detailplay",
+					"query": "albumInfoId=146497123&anchorInfoId=30913215",
 					"scene": null
 				}
 			]
