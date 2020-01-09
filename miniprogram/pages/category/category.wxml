@@ -1,10 +1,9 @@
 <!--pages/category/category.wxml-->
 <view class="category">
-  <view class="searchbox">
-    <view class="searchIn">
-      搜索你想听的节目
-    </view>
-  </view>
+  <view bindtap="handleSearch" class='index-searchbox'>
+  <i class="iconfont icon-sousuo"></i>
+  <text>搜索你想听的节目</text>
+</view>
   <view class="ca-content">
     <view class="menu-fill">
     </view>
@@ -12,6 +11,11 @@
       <view class="menu-out" >
         <view wx:for="{{menuList}}" wx:key="idx" wx:for-index="idx"  class="menu-item {{activeBtn==item.category.name? 'menu-active':''}}" bindtap="activeClick" data-item="{{item.category.name}}" data-index="{{idx}}">
           {{item.category.displayName}}
+          <view class="bd bd1"></view>
+          <view class="bd bd2"></view>
+          <view class="bd bd3"></view>
+          <view class="bd bd4"></view>
+          <view class="bd bd5"></view>
         </view>
       </view>
     </scroll-view>
@@ -19,8 +23,8 @@
       <view class="cate-item" id="{{item.category.name}}" wx:for="{{menuList}}" wx:key="categoryId" wx:for-index="idx">
         <view class="cate-title">{{item.category.displayName}}</view>
         <view class="cate-content">
-            <view class="cate-text" wx:for="{{item.category.subCategories}}" wx:key="idx" wx:for-index="idx" wx:if="{{idx<6}}">
-                 {{item.displayValue}}
+            <view class="cate-text" bindtap="handleSkip"  wx:for="{{item.category.subCategories}}" wx:for-item="itm" wx:key="idx" wx:for-index="idx" wx:if="{{idx<6}}" data-itemCode="{{item.category.code}}" data-textCode="{{itm.code}}">
+                 {{itm.displayValue}}
             </view>
            
         </view>

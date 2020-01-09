@@ -1,0 +1,119 @@
+/* miniprogram/pages/cateContent/cateConetnt.wxss */
+.cateContent{
+  display: flex;
+  flex-direction: column;
+}
+.cc-title{
+
+  display: block;
+  height: 80rpx;
+ position: relative;
+}
+.cc-menu{
+  
+  z-index: 20;
+  height: 80rpx;
+  overflow-x:scroll;
+}
+.menu-ul{
+width:max-content;
+padding-right: 80rpx;
+}
+.menu-item{
+  position: relative;
+  font-size: 28rpx;
+  display: inline-block;
+  width: 130rpx;
+  height:100%;
+  word-wrap: normal;
+  text-align: center;
+  line-height: 80rpx;
+}
+.menuActive{
+  color: #f86442
+}
+.menuActive::before{
+  content:'';
+  width: 40%;
+  padding-top: 4rpx;
+  background: #f86442;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -26rpx;
+}
+.arrow-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 80rpx;
+  width: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #eff1f4;
+  color: #f86442;
+  transform: rotate(90deg);
+  font-family: "宋体";
+  font-weight: bold;
+  font-size: 40rpx;
+  box-shadow: 0px 2px 2px #ccc;
+}
+
+.list-container{
+  margin-left: 4%;
+  overflow-y: scroll;
+}
+.list-view{
+   position: relative;
+  height: 140rpx;
+  padding: 30rpx 0;
+  width: 100%;
+  display: flex;
+}
+.list-view image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 30rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.list-content{
+ 
+  flex: 1;
+  height: 100%;
+  overflow-x: hidden;
+  padding-right: 50rpx;
+}
+.list-border{
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 580rpx;
+  padding-top: 2rpx;
+  background: #ccc;
+}
+.list-title{
+    color: rgb(51, 51, 51);
+    font-size: 32rpx;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list-subtitle{
+    margin: 10rpx 0 14rpx;
+    font-size: 26rpx;
+    color: #999;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+   
+}
+.list-count{
+  font-size: 22rpx;
+  color: #999;
+}
+.count1{
+  margin-right: 30rpx;
+}

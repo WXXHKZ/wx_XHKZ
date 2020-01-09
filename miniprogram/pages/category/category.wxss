@@ -4,17 +4,21 @@
   display: flex;
   flex-direction: column;
 }
-.searchbox{
-  background: #fff;
-  padding: 20rpx;
-}
-.searchIn{
-  background: #eff1f4;
-  border-radius: 10rpx;
+.index-searchbox {
+  background-color: #eff1f4;
   font-size: 24rpx;
-  padding:10rpx;
-  color: #ababab;
+  padding: 0 20rpx;
+  border-radius: 20rpx;
+  margin: 0 20rpx 20rpx;
+  color: #999;
+  height: 58rpx;
+  line-height: 58rpx;
 }
+.icon-sousuo{
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+
 .ca-content{
   position: relative;
   flex:1;
@@ -42,11 +46,43 @@
   color: #ababab;
   font-size: 30rpx;
   padding-left: 30rpx;
+  position: relative;
 }
+.bd{
+  position: absolute;
+  left: 0;
+  width: 20rpx;
+  padding: 1rpx 0 0 0 ;
+  background: #ababab;
+}
+.bd1{
+  width: 25rpx;
+  top: 20rpx;
+}
+.bd2{
+  width: 10rpx;
+  top: 45rpx;
+}
+.bd3{
+  width: 17rpx;
+  top: 60rpx;
+}
+.bd4{
+  width: 10rpx;
+  top: 85rpx;
+}
+.bd5{
+  width: 17rpx;
+  top: 100rpx;
+}
+
 .menu-active{
   color: #f86442;
   font-weight: 600;
   font-size: 32rpx;
+}
+.menu-active .bd1{
+  background: #f86442
 }
 .cate-show{
   flex: 1;
