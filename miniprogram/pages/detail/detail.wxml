@@ -1,0 +1,96 @@
+<!--pages/detail/detail.wxml-->
+<view wx:if="{{maindata!==''&&anchordata!==''}}">
+  <view class="bg-box">
+    <image src="https://imagev2.xmcdn.com/{{maindata.albumDetailInfo.albumInfo.cover}}" alt=""></image>
+  </view>
+
+  <view class="main-msg">
+    <view class="iconfont icon-right" bindtap="handletohome"></view>
+    <view class="img-box">
+      <image class="img1" src="https://imagev2.xmcdn.com/{{maindata.albumDetailInfo.albumInfo.cover}}" alt=""></image>
+      <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt=""></image>
+      <view class="play-num">
+        <view class="iconfont icon-erji"></view>
+        <view>{{playCount}}</view>
+      </view>
+    </view>
+    <view class="mgs-box">
+      <view class="h3">
+        {{maindata.albumDetailInfo.albumInfo.title}}
+      </view>
+      <view class="anchor">
+        <view>
+          <image src="https://imagev2.xmcdn.com/{{anchordata.userInfo.logo}}" alt="" />
+        </view>
+        <view>
+          {{anchordata.userInfo.nickname}}
+          <view class="iconfont icon-right1"></view>
+        </view>
+      </view>
+      <view class="order-box">
+        <text>{{subscribeCount}}人收藏 | 已更新{{maindata.albumDetailInfo.statCountInfo.trackCount}}期</text>
+        <view class="btn-box">
+          <view class="btn-share">
+            <view class="iconfont icon-fenxiang"></view>
+            分享
+          </view>
+          <view class="btn-collection">
+            <view class="iconfont icon-jia1"></view>
+            收藏
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="palylist-box">
+    <view class="playlist-title">
+      <view class="playlist-palyall">
+        <view class="iconfont icon-bofang2"></view>
+        <view>
+          播放全部
+        </view>
+      </view>
+      <view class="playlist-right">
+        <view class="playlist-sort">
+        <view class="iconfont icon-paixu"></view>
+        <view>
+          正序
+        </view>
+      </view>
+      <view class="playlist-change">
+        <view class="iconfont icon-xuanji"></view>
+        <view>
+          选集
+        </view>
+      </view>
+      </view> 
+    </view>
+    <scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom" >
+      <view class="list-li" wx:for="{{playlistdata}}" wx:key="id">
+        <view class="li-index">{{index+1}}</view>
+        <view class="li-content">
+          <view class="li-h4">
+            {{item.trackInfo.title}}
+          </view>
+          <view class="li-p">
+            <view class="li-playCount">
+              <view class="iconfont icon-pause"></view>
+              <view>
+              {{item.statCountInfo.playCount}}
+              </view>
+            </view>
+            <view class="li-duration">
+              <view class="iconfont icon-shijian"></view>
+              <view>
+              {{item.trackInfo.duration}}
+              </view>
+            </view>
+          </view> 
+        </view>
+        <view class="li-time">{{item.trackInfo.createdAt}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>

@@ -52,8 +52,14 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "blog",
-					"pathName": "pages/blog/blog",
+					"name": "pages/detail/detail",
+					"pathName": "pages/detail/detail",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
 					"scene": null
 				},
 				{
