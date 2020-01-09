@@ -73,7 +73,7 @@
       </view>
     </view>
     <!-- 切换账号 -->
-    <view class="changeNum">
+    <view class="changeNum"  bindtap="bottomBtn">
       <view class="left">
         <icon class="iconfont change"></icon>
         <text>切换账号</text>
