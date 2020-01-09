@@ -16,7 +16,7 @@
   <view class="top">
     <view class="user">
       <view class="left">
-        <view id="mine" bindtap="changeLog">
+        <view id="mine" bindtap="bottomBtn">
           <cover-image id="userImg" src="{{userImg}}"></cover-image>
           <icon class="iconfont weixin"></icon>
         </view>
@@ -29,7 +29,7 @@
       </view>
     </view>
   <!-- 签到 -->
-    <view class="sign">
+    <view class="sign" bindtap="signInShow">
       <view class="left">
         <icon class="iconfont signin"></icon>
         <text>签到</text>
@@ -83,4 +83,80 @@
       </view>
     </view>
   </view>
+
+  <!-- 7天签到 -->
+  <view id="signin" class="{{signInShow ? 'show' : ''}}">
+    <view class="h">签到领星星</view>
+    <view class="continued">
+      已连续签到：<text id="num">{{signDays}}</text>天
+    </view>
+    <view class="mainSg">
+      <view class="item {{signDays == 1 ? 'YsignIn' : 'NsignIn'}}">
+        <view>
+          第 1 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 2 ? 'YsignIn' : 'NsignIn'}}">
+        <view>
+          第 2 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 3 ? 'YsignIn' : 'NsignIn'}}">
+        <view>
+          第 3 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 4 ? 'YsignIn' : 'NsignIn'}}">
+        <view>
+          第 4 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 5 ? 'YsignIn' : 'NsignIn'}}">
+        <view>
+          第 5 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 6 ? 'YsignIn' : 'NsignIn'}} db">
+        <view>
+          第 6 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+      <view class="item {{signDays == 7 ? 'YsignIn' : 'NsignIn'}} db">
+        <view>
+          第 7 天
+        </view>
+        <icon class="iconfont star">
+
+        </icon>
+      </view>
+    </view>
+    <view id="signBtn" bindtap="signIn">签到</view>
+    <view class="foot">星星可用于解锁精品专辑</view>
+  </view>
+  <!-- 切换登录 -->
+  <view id="logout" class="{{isBtnHide ? 'hide' : ''}}">
+    <view class="logout">
+      <text class="btn1" bindtap="changeLog">切换手机登录</text>
+      <text class="btn2" bindtap="cancel">取消</text>
+    </view>
+  </view>
 </view>
+  <view class="bg {{isBtnHide ? 'hide' : ''}}"></view>

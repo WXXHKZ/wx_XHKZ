@@ -11,6 +11,9 @@ Page({
     isHide: true,
     userName: '',
     userImg: '',
+    isBtnHide: true,
+    signInShow: false,
+    signDays: "0"
   },
 
   // 切换登录
@@ -18,8 +21,68 @@ Page({
     this.setData({
       isHide: true,
       userName: '',
+      isBtnHide: true,
       userImg: ''
     })
+    // this.animate('.bg', [{
+    //   opacity: '0.6',
+    // }, {
+    //   opacity: '0'
+    // }], 500)
+  },
+
+  // 签到
+  signInShow: function () {
+    this.setData({
+      signInShow: true
+    })
+  },
+  signIn: function () {
+    this.setData({
+      signInShow: false
+    })
+    var toDay = (new Date()).getDate().toString()
+    if(toDay != wx.getStorageSync('Day')) {
+
+      var D = wx.getStorageSync('Day')
+      if (parseInt(toDay) != parseInt(D) + 1) {
+        // 非连续签到
+        wx.setStorage({
+          key: 'Fir',
+          data: (1).toString()
+        })
+      } else {
+        // 连续签到
+        wx.setStorage({
+          key: 'Fir',
+          data: (parseInt(this.data.signDays) + 1).toString()
+        })
+      }
+
+      wx.setStorageSync('Day', toDay)
+      var that = this
+      var signDays = wx.getStorage({
+        key: 'Fir',
+        success: function(res) {
+          that.setData({
+            signDays: res.data
+          })
+          wx.showToast({
+            title: '签到成功！',
+            icon: 'success',
+            duration: 1000,
+            mask: true
+          })
+        },
+      })
+    } else {
+      wx.showToast({
+        title: '今日已经签到',
+        icon: 'loading',
+        duration: 1000,
+        mask: true
+      })
+    }
   },
 
   /** 切换模式 **/
@@ -62,25 +125,14 @@ Page({
       skinStyle: app.globalData.skin,
       skinSwitch: app.globalData.skinSwitch
     }) 
-    // 是否第一次进入
-    var fir = wx.getStorageSync('fir')
-    if (fir === 1) {
-      wx.getUserInfo({
-        success: function (res) {
-          console.log(res)
-        }
-      })
-    } else {
-      
-    }
   },
 
   bindGetUserInfo: function(e) {
     if(e.detail.userInfo) {
       var that = this
       let user = e.detail.userInfo
+      let openid = app.globalData.openid
       // 用户信息
-      console.log(user)
       this.setData({
         isHide: false,
         userName: user.nickName,
@@ -91,12 +143,37 @@ Page({
     }
   },
 
+  bottomBtn: function () {
+    this.setData({
+      isBtnHide: false
+    })
+    // this.animate('.bg', [{
+    //   opacity: '0',
+    // }, {
+    //   opacity: '0.6'
+    // }], 500)
+  },
+  cancel: function () {
+    this.setData({
+      isBtnHide: true
+    })
+    // this.animate('.bg', [{
+    //   opacity: '0.6',
+    // }, {
+    //   opacity: '0'
+    // }], 500)
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // 签到天数渲染
+    let signDay = wx.getStorageSync('Fir')
+    this.setData({
+      signDays: signDay
+    })
   },
 
   /**

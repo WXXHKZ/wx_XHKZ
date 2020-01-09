@@ -101,3 +101,144 @@
   color: greenyellow;
   border:  1rpx solid greenyellow;
 }
+/* 换号 */
+#logout{
+  background: #efefef;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.bg{
+  background: #000;
+  position: absolute;
+  opacity: .6;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.hide{
+  display: none;
+}
+#logout text{
+  width: 100vw;
+  height: 8.8vh;
+  background: #fff;
+  display: block;
+  line-height: 8.8vh;
+  color: #000;
+}
+.logout{
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  background: #eee;
+  border-radius: 30rpx 30rpx 0 0;
+}
+.btn1{
+  margin-bottom: 1.3vh;
+}
+/* 签到 */
+.show{
+  display: block !important;
+}
+#signin{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #fefbfb;
+  border: 14rpx solid #e76d4d;
+  width: 81.5vw;
+  height: 53.4vh;
+  border-radius: 5%;
+  display: none;
+  padding-bottom: 80rpx;
+}
+#signin .h{
+  font-size: 30rpx;
+  color: #f86442;
+  text-align: center;
+  margin-top: 3.5vh;
+}
+#signin .continued{
+  color: #666666;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 48rpx;
+  height: 48rpx;
+  border: 2rpx solid #ffece8;
+  padding: 0 50px;
+  border-radius: 48rpx;
+  margin: 2.2vh auto 2.6vh;
+  width: 180rpx;
+}
+#num{
+  color: #f86442;
+}
+#signin .mainSg{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+}
+#signin .mainSg .item{
+  color: #fff;
+  border-radius: 10%;
+  height: calc(20vw - 45rpx);
+  width: calc(20vw - 45rpx);
+  margin: 1.1vh 1.4vw;
+}
+#signin .mainSg .item view{
+  text-align: center;
+  line-height: 42rpx;
+  border-radius: 10% 10% 0 0;
+  font-size: 20rpx;
+}
+/* 未签到 */
+#signin .mainSg .NsignIn{
+  border: 3rpx solid #f86442;
+}
+#signin .mainSg .NsignIn view{
+  background: #f86442;
+}
+/* 签到 */
+#signin .mainSg .YsignIn{
+  border: 3rpx solid #cccccc;
+}
+#signin .mainSg .YsignIn view{
+  background: #cccccc;
+}
+#signin .mainSg .YsignIn .iconfont{
+  color: #cccccc;
+}
+#signin .mainSg .db{
+  flex-grow: 2;
+}
+#signin .mainSg .iconfont{
+  width: 100%;
+  height: calc(100% - 42rpx);
+  color: #e86d4d;
+  text-align: center;
+}
+#signin #signBtn{
+  background: #f86442;
+  width: 66.67vw;
+  line-height: 6.25vh;
+  height: 6.25vh;
+  border-radius:  6.25vh;
+  display: block;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  margin: 2.6vh auto 0;
+}
+#signin .foot{
+  text-align: center;
+  color: #f86b4a;
+  font-size: 20rpx;
+  margin-top: 16rpx;
+}

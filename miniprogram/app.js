@@ -14,20 +14,6 @@ App({
         traceUser: true,
       })
     }
-    var logs = wx.getStorageSync('log') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-    // 是否第一次登录
-    var fir = wx.getStorageSync('fir')
-    if(fir === 1) {
-      wx.getUserInfo({
-        success: function(res) {
-          console.log('app',res)
-        }
-      })
-    } else {
-      
-    }
     this.globalData = {}
     this.skin()
   },
