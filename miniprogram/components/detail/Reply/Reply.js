@@ -27,7 +27,7 @@ Component({
         page: this.data.page + 1
       })
       wx.request({
-        url: `https://www.ximalaya.com/revision/comment/queryReplies?trackId=${this.properties.albumInfoId}&commentId=${e.target.dataset.id}&page=${this.data.page}&pageSize=20`,
+        url: `https://www.chenxuejing.xyz/api/revision/comment/queryReplies?trackId=${this.properties.albumInfoId}&commentId=${e.target.dataset.id}&page=${this.data.page}&pageSize=20`,
         method: 'get',
         success: (res) => {
           this.setData({

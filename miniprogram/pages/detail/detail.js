@@ -25,7 +25,7 @@ Page({
    */
   onReady: function() {
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/album/v2/queryAlbumPage/${this.options.albumInfoId}?albumCounts=track`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/album/v2/queryAlbumPage/${this.options.albumInfoId}?albumCounts=track`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -36,7 +36,7 @@ Page({
       }
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/common/user/queryUserInfo/${this.options.anchorInfoId}?userCountKeys=follower`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/user/queryUserInfo/${this.options.anchorInfoId}?userCountKeys=follower`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -45,7 +45,7 @@ Page({
       }
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=1&pageSize=20&asc=true&countKeys=play%2Ccomment`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=1&pageSize=20&asc=true&countKeys=play%2Ccomment`,
       method: 'get',
       success: (res) => {
         let CategoryList = res.data.data.trackDetailInfos
@@ -136,7 +136,7 @@ Page({
       page: this.data.page + 1
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=${this.data.page}&pageSize=20&asc=true&countKeys=play%2Ccomment`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/common/album/queryAlbumTrackRecordsByPage?albumId=${this.options.albumInfoId}&page=${this.data.page}&pageSize=20&asc=true&countKeys=play%2Ccomment`,
       method: 'get',
       success: (res) => {
         let CategoryList = res.data.data.trackDetailInfos

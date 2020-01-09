@@ -33,7 +33,7 @@ Page({
       albumInfoId: this.options.albumInfoId
     })
     wx.request({
-      url: `https://m.ximalaya.com/m-revision/page/track/queryTrackPage/${this.data.albumInfoId}`,
+      url: `https://www.chenxuejing.xyz/main/m-revision/page/track/queryTrackPage/${this.data.albumInfoId}`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -42,7 +42,7 @@ Page({
       }
     })
     wx.request({
-      url: `https://www.ximalaya.com/revision/comment/queryComments?trackId=${this.options.albumInfoId}&page=1&pageSize=20`,
+      url: `https://www.chenxuejing.xyz/api/revision/comment/queryComments?trackId=${this.options.albumInfoId}&page=1&pageSize=20`,
       method: 'get',
       success: (res) => {
         this.setData({
