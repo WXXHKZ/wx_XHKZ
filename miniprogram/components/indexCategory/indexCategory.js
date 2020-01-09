@@ -25,7 +25,7 @@ Component({
     attached: function () {
       // 在组件实例进入页面节点树时执行
       wx.request({
-        url: 'https://m.ximalaya.com/m-revision/page/index/queryIndexCategoryTabContent?moduleKey=youshengshu',
+        url: 'https://www.chenxuejing.xyz/main/m-revision/page/index/queryIndexCategoryTabContent?moduleKey=youshengshu',
         dataType: 'json',
         success: (res) => {
           this.setData({
