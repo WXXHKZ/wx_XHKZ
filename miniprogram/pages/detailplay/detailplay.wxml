@@ -1,4 +1,70 @@
-
+<view class="play">
+  <!-- <view class="iconfont icon-right" bindtap="handleback"></view> -->
+  <view class="play-box">
+    <view class="play-title">{{maindata.trackDetailInfo.trackInfo.title}}</view>
+    <view class="play-img-box">
+      <image src="https://imagev2.xmcdn.com/{{maindata.trackDetailInfo.trackInfo.cover}}" alt="" class="play-img" wx:if="{{maindata!==''}}"></image>
+    </view>
+    <audio src="{{maindata.trackDetailInfo.trackInfo.playPath}}" id="myAudio" loop bindtimeupdate='bindtimeupdate'></audio>
+    <view class="body-view">
+      <slider activeColor="orangered" value="{{num}}" bindchange="audio14" max="{{max}}" />
+      <view class="time-box">
+        <view>{{nowtime}}</view>
+        <view>{{alltime}}</view>
+      </view>
+    </view>
+    <view class="btn-control">
+      <view class="iconfont icon-yinpin-shangxiayiqu"></view>
+      <view class="iconfont icon-bofang3" bindtap="audioPlay" wx:if="{{!playsign}}"></view>
+      <view class="iconfont icon-zanting" bindtap="audioPause" wx:if="{{playsign}}"></view>
+      <view class="iconfont icon-yinpin-shangxiayiqu1"></view>
+    </view>
+    <!-- <button type="primary" bindtap="audio14">设置当前播放时间为14秒</button> -->
+    <view class="btn-other">
+      <view class="play-list-btn">
+        <text class="iconfont icon-bofangliebiao"></text>
+        <text>播放列表</text>
+      </view>
+      <view class="play-share-btn">
+        <text class="iconfont icon-fenxiang"></text>
+        <text>分享</text>
+      </view>
+      <view class="play-like-btn">
+        <text class="iconfont icon-xin1"></text>
+        <text>喜欢</text>
+      </view>
+      <view class="play-moon-btn">
+        <text class="iconfont icon-dengpao"></text>
+        <text>夜间模式</text>
+      </view>
+      <view class="play-close-btn">
+        <text class="iconfont icon-naozhong"></text>
+        <text>定时关闭</text>
+      </view>
+    </view>
+  </view>
+  <view class="news">
+    <view class="news-img-box">
+      <image src="https://imagev2.xmcdn.com/{{maindata.albumDetailInfo.albumInfo.cover}}" alt="" class="news-img" wx:if="{{maindata!==''}}"></image>
+    </view>
+    <view class="news-contents">
+      <view class="news-h4"> {{maindata.albumDetailInfo.albumInfo.title}}</view>
+      <view class="news-p">{{maindata.albumDetailInfo.statCountInfo.subscribeCount}}人收藏</view>
+    </view>
+    <view class="btn-collection">
+      <view class="iconfont icon-jia1"></view>
+      收藏
+    </view>
+  </view>
+  <view class="introduce">
+    <view class="anchor-name">
+      主播 {{maindata.anchorInfo.userInfo.nickname}}
+    </view>
+    <view class="introduce-msg">
+      {{maindata.albumDetailInfo.albumInfo.shortIntro}}
+    </view>
+  </view>
+</view>
 <view class="comment">
   <view class="h3">
     全部评论

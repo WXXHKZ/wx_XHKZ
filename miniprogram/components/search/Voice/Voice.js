@@ -64,6 +64,11 @@ Component({
           })
         }
       })
+    },
+    handletodetailplay:function(e){
+      wx.navigateTo({
+        url: `/pages/detailplay/detailplay?albumInfoId=${e.currentTarget.dataset.albuminfoid}&anchorInfoId=${e.currentTarget.dataset.anchorinfoid}`,
+      })
     }
 
   },

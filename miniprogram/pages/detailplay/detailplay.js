@@ -5,11 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
+    maindata:'',
     commentdata: '',
     morerepalce: [],
     totalComment: '',
     page: 0,
-    albumInfoId:''
+    albumInfoId:'',
+    playsign:false,
+    num:0,
+    max:'',
+    nowtime:'0:00',
+    alltime: '0:00'
   },
 
   /**
@@ -26,7 +32,15 @@ Page({
     this.setData({
       albumInfoId: this.options.albumInfoId
     })
-    console.log(this.options.anchorInfoId, this.options.albumInfoId)
+    wx.request({
+      url: `https://m.ximalaya.com/m-revision/page/track/queryTrackPage/${this.data.albumInfoId}`,
+      method: 'get',
+      success: (res) => {
+        this.setData({
+          maindata: res.data.data
+        })
+      }
+    })
     wx.request({
       url: `https://www.ximalaya.com/revision/comment/queryComments?trackId=${this.options.albumInfoId}&page=1&pageSize=20`,
       method: 'get',
@@ -37,6 +51,8 @@ Page({
         })
       }
     })
+
+    this.audioCtx = wx.createAudioContext('myAudio')
   },
 
   /**
@@ -81,7 +97,50 @@ Page({
 
   },
 
-  
+  audioPlay: function () {
+    this.audioCtx.play()
+    this.setData({
+      playsign:true
+    })
+  },
+  audioPause: function () {
+    this.audioCtx.pause()
+    this.setData({
+      playsign: false
+    })
+  },
+  audio14: function (e) {
+    this.setData({
+      num: e.detail.value
+    })
+    this.audioCtx.seek(this.data.num)
+  },
 
+  bindtimeupdate:function(res) {
+    this.setData({
+      max: parseInt(res.detail.duration),
+      nowtime: this._tranTime(parseInt(res.detail.currentTime)),
+      alltime: this._tranTime(parseInt(res.detail.duration)),
+      num: parseInt(res.detail.currentTime)
+    })
+  },
 
+  _tranTime(num) {
+    let minute = parseInt(num / 60);
+    let second = num % 60;
+    let time = ''
+    if (second < 10) {
+      time = minute + ":0" + second
+    } else {
+      time = minute + ":" + second
+    }
+
+    return time
+  },
+
+  handleback: function (e) {
+    wx.navigateBack({
+      delta:1
+    })
+  },
 })

@@ -153,9 +153,9 @@ Page({
     })
   },
 
-  handletohome: function(e) {
-    wx.reLaunch({
-      url: '../index/index',
+  handleback: function (e) {
+    wx.navigateBack({
+      delta: 1
     })
   },
 

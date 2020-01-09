@@ -65,9 +65,10 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "pages/detailplay/detailplay",
 					"pathName": "pages/detailplay/detailplay",
+					"query": "albumInfoId=146497123&anchorInfoId=30913215",
 					"scene": null
 				}
 			]

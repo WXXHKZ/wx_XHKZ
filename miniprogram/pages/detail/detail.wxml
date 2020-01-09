@@ -5,7 +5,7 @@
   </view>
 
   <view class="main-msg">
-    <view class="iconfont icon-right" bindtap="handletohome"></view>
+    <!-- <view class="iconfont icon-right" bindtap="handleback"></view> -->
     <view class="img-box">
       <image class="img1" src="https://imagev2.xmcdn.com/{{maindata.albumDetailInfo.albumInfo.cover}}" alt=""></image>
       <image class="img2" src="https://s1.xmcdn.com/yx/ximalaya-mobile-resource/last/dist/images/listen_pic_album@3x_d18f4f7.png" alt=""></image>
