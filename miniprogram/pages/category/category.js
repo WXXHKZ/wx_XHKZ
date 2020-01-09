@@ -48,7 +48,7 @@ Page({
    */
   onLoad: function(options) {
     wx.request({
-      url: 'https://m.ximalaya.com/m-revision/page/category/queryCategories',
+      url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategories',
       success: (res) => {
         this.setData({
           menuList: res.data.data

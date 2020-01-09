@@ -29,6 +29,9 @@ padding-right: 80rpx;
   text-align: center;
   line-height: 80rpx;
 }
+.menuActive{
+  color: #f86442
+}
 .menuActive::before{
   content:'';
   width: 40%;
