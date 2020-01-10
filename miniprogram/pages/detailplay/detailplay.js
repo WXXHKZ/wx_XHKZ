@@ -5,16 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    maindata:'',
+    maindata: '',
     commentdata: '',
     morerepalce: [],
     totalComment: '',
     page: 0,
-    albumInfoId:'',
-    playsign:false,
-    num:0,
-    max:'',
-    nowtime:'0:00',
+    albumInfoId: '',
+    playsign: false,
+    num: 0,
+    max: '',
+    nowtime: '0:00',
     alltime: '0:00'
   },
 
@@ -28,7 +28,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function (options) {
+  onReady: function(options) {
     this.setData({
       albumInfoId: this.options.albumInfoId
     })
@@ -41,8 +41,9 @@ Page({
         })
       }
     })
+
     wx.request({
-      url: `https://www.chenxuejing.xyz/api/revision/comment/queryComments?trackId=${this.options.albumInfoId}&page=1&pageSize=20`,
+      url: `https://www.chenxuejing.xyz/main/revision/comment/queryComments?trackId=${this.options.albumInfoId}&page=1&pageSize=20`,
       method: 'get',
       success: (res) => {
         this.setData({
@@ -97,26 +98,30 @@ Page({
 
   },
 
-  audioPlay: function () {
+  audioPlay: function() {
     this.audioCtx.play()
     this.setData({
-      playsign:true
+      playsign: true
     })
   },
-  audioPause: function () {
+
+
+  audioPause: function() {
     this.audioCtx.pause()
     this.setData({
       playsign: false
     })
   },
-  audio14: function (e) {
+
+  
+  audio14: function(e) {
     this.setData({
       num: e.detail.value
     })
     this.audioCtx.seek(this.data.num)
   },
 
-  bindtimeupdate:function(res) {
+  bindtimeupdate: function(res) {
     this.setData({
       max: parseInt(res.detail.duration),
       nowtime: this._tranTime(parseInt(res.detail.currentTime)),
@@ -138,9 +143,9 @@ Page({
     return time
   },
 
-  handleback: function (e) {
+  handleback: function(e) {
     wx.navigateBack({
-      delta:1
+      delta: 1
     })
   },
 })

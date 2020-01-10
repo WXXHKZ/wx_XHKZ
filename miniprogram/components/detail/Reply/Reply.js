@@ -27,12 +27,13 @@ Component({
         page: this.data.page + 1
       })
       wx.request({
-        url: `https://www.chenxuejing.xyz/api/revision/comment/queryReplies?trackId=${this.properties.albumInfoId}&commentId=${e.target.dataset.id}&page=${this.data.page}&pageSize=20`,
+        url: `https://www.chenxuejing.xyz/main/revision/comment/queryReplies?trackId=${this.properties.albumInfoId}&commentId=${e.target.dataset.id}&page=${this.data.page}&pageSize=20`,
         method: 'get',
         success: (res) => {
           this.setData({
             morerepalce: this.data.morerepalce.concat(res.data.data.replies)
           })
+          console.log(res)
         }
       })
     }
