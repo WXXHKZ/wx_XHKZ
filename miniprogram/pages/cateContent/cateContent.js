@@ -17,6 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   avtiveClick(e){
+
     if (e.currentTarget.dataset.text ==='quanbu'){
       this.setData({
         textCode: e.currentTarget.dataset.text
@@ -63,6 +64,7 @@ Page({
       })
     }
     
+
   },
   //二级菜单
   submenuClick(){

@@ -12,7 +12,9 @@
     "pages/blog-edit/blog-edit",
     "pages/blog-comment/blog-comment",
     "pages/musiclist/musiclist",
-    "pages/player/player"
+    "pages/player/player",
+    "pages/detailplay/detailplay"
+
   ],
   "requiredBackgroundModes": [
     "audio"

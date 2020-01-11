@@ -1,7 +1,7 @@
 <!--components/search/Album/Album.wxml-->
 <scroll-view class="scroll-box"  scroll-y="true" bindscrolltolower="handlescrollbottom">
   <view wx:for="{{datalist}}" wx:key="index" class="list-box">
-    <view class="li-item">
+    <view class="li-item" bindtap="handletodetail" data-albumInfoId="{{item.albumInfo.id}}" data-anchorInfoId="{{item.albumInfo.uid}}">
       <view class="image-box">
         <image mode="widthFix" src="{{item.albumInfo.cover_path}}" alt="" />
       </view>

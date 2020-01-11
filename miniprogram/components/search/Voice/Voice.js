@@ -49,7 +49,7 @@ Component({
         page: this.data.page + 1
       })
       wx.request({
-        url: `https://m.ximalaya.com/m-revision/page/search?kw=${this.properties.value}&core=track&page=${this.data.page}&rows=20`,
+        url: `https://www.chenxuejing.xyz/main/m-revision/page/search?kw=${this.properties.value}&core=track&page=${this.data.page}&rows=20`,
         method: 'get',
         success: (res) => {
           let CategoryList = res.data.data.trackViews.tracks
@@ -63,6 +63,11 @@ Component({
             datalist: this.data.datalist.concat(res.data.data.trackViews.tracks)
           })
         }
+      })
+    },
+    handletodetailplay:function(e){
+      wx.navigateTo({
+        url: `/pages/detailplay/detailplay?albumInfoId=${e.currentTarget.dataset.albuminfoid}&anchorInfoId=${e.currentTarget.dataset.anchorinfoid}`,
       })
     }
 
