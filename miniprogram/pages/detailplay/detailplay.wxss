@@ -214,7 +214,8 @@ page {
 
 .comment-msg {
   display: block;
-  width: calc(100%-40rpx);
+  /* width: calc(100%-40rpx); */
+  flex: 1;
   padding-right: 40rpx;
 }
 
