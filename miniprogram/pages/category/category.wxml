@@ -21,7 +21,7 @@
     </scroll-view>
     <scroll-view scroll-y="true"  bindscrolltoupper="upper" scroll-with-animation="true" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" class="cate-show">
       <view class="cate-item" id="{{item.category.name}}" wx:for="{{menuList}}" wx:key="categoryId" wx:for-index="idx">
-        <view class="cate-title">{{item.category.displayName}}</view>
+        <view class="cate-title" bindtap="allClick" data-all="{{item.category.code}}">{{item.category.displayName}}</view>
         <view class="cate-content">
             <view class="cate-text" bindtap="handleSkip"  wx:for="{{item.category.subCategories}}" wx:for-item="itm" wx:key="idx" wx:for-index="idx" wx:if="{{idx<6}}" data-itemCode="{{item.category.code}}" data-textCode="{{itm.code}}">
                  {{itm.displayValue}}

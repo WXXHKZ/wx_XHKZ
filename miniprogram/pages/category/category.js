@@ -40,9 +40,13 @@ Page({
     wx.navigateTo({
       url: `/pages/cateContent/cateContent?itemCode=${e.currentTarget.dataset.itemcode}&textCode=${e.currentTarget.dataset.textcode}`,
     })
-    console.log(e.currentTarget.dataset)
+    
   },
-
+  allClick(e){
+    wx.navigateTo({
+      url: `/pages/cateContent/cateContent?allCode=${e.currentTarget.dataset.all}`,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

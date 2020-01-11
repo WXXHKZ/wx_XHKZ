@@ -9,74 +9,119 @@ Page({
       textCode:'',
       menuList: null,
       listView: null,
+      ctoView: '',
+      isShow:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   avtiveClick(e){
-    this.setData({
-      textCode: e.currentTarget.dataset.text
-    })
-    wx.request({
-      url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
-      data: {
-        categoryCode: this.data.itemCode,
-        subCategoryCode: this.data.textCode,
-        pageSize: 30,
-        sort: 0,
-      },
-      success: (res) => {
-        console.log(res.data)
-        console.log(res.data.data.subCategories, res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos)
-        this.setData({
-          menuList: res.data.data.subCategories,
-          listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
-        })
-      }
-    })
+
+    if (e.currentTarget.dataset.text ==='quanbu'){
+      this.setData({
+        textCode: e.currentTarget.dataset.text
+      })
+      wx.request({
+        url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
+        data: {
+          categoryCode: this.data.itemCode,
+          pageSize: 30,
+          sort: 0,
+        },
+        success: (res) => {
+          this.setData({
+            menuList: [
+              { code: 'quanbu', metaDataValue: '全部' },
+              ...res.data.data.subCategories
+            ],
+            listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
+          })
+        }
+      })
+    }else{
+      this.setData({
+        textCode: e.currentTarget.dataset.text,
+        ctoView: this.data.textCode
+      })
+      wx.request({
+        url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
+        data: {
+          categoryCode: this.data.itemCode,
+          subCategoryCode: this.data.textCode,
+          pageSize: 30,
+          sort: 0,
+        },
+        success: (res) => {
+          this.setData({
+            menuList: [
+              { code: 'quanbu', metaDataValue: '全部' },
+              ...res.data.data.subCategories
+            ],
+            listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
+          })
+        }
+      })
+    }
+    
+
   },
-  allClick(e){
-    wx.request({
-      url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
-      data: {
-        categoryCode: this.data.itemCode,
-        pageSize: 30,
-        sort: 0,
-      },
-      success: (res) => {
-        console.log(res.data)
-        console.log(res.data.data.subCategories, res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos)
-        this.setData({
-          menuList: res.data.data.subCategories,
-          listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
-        })
-      }
+  //二级菜单
+  submenuClick(){
+    this.setData({
+      isShow: !this.data.isShow
     })
   },
   onLoad: function (options) {
+    if(options.allCode){
+      this.setData({
+        itemCode: options.allCode,
+        textCode: 'quanbu',
+      })
+      wx.request({
+        url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
+        data: {
+          categoryCode: this.data.itemCode,
+          pageSize: 30,
+          sort: 0,
+        },
+        success: (res) => {
+          console.log(res)
+          this.setData({
+            menuList: [
+              { code: 'quanbu', metaDataValue:'全部'},
+              ...res.data.data.subCategories
+            ],
+            listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
+          })
+        }
+      })
+    }else{
       this.setData({
         itemCode: options.itemCode,
         textCode: options.textCode,
       })
-        
-    wx.request({
-      url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
-      data: {
-        categoryCode: this.data.itemCode,
-        subCategoryCode: this.data.textCode,
-        pageSize: 30,
-        sort: 0,
-      },
-      success:(res)=> {
-        console.log(res.data)
-        console.log(res.data.data.subCategories, res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos)
-        this.setData({
-          menuList: res.data.data.subCategories,
-          listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
-        })
-      }
-    })
+
+      wx.request({
+        url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
+        data: {
+          categoryCode: this.data.itemCode,
+          subCategoryCode: this.data.textCode,
+          pageSize: 30,
+          sort: 0,
+        },
+        success: (res) => {
+          this.setData({
+            menuList: [
+              { code: 'quanbu', metaDataValue: '全部' },
+              ...res.data.data.subCategories
+            ],
+            listView: res.data.data.firstPageCategoryAlbums.albumBriefDetailInfos,
+          })
+        }
+      })
+    }
+    
 
   },
 
