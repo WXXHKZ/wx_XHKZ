@@ -19,7 +19,7 @@ Page({
       textCode: e.currentTarget.dataset.text
     })
     wx.request({
-      url: 'https://m.ximalaya.com/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
+      url: 'https://www.chenxuejing.xyz/main/m-revision/page/category/queryCategoryPage', //仅为示例，并非真实的接口地址
       data: {
         categoryCode: this.data.itemCode,
         subCategoryCode: this.data.textCode,
