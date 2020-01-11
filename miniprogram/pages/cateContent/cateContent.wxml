@@ -1,31 +1,37 @@
 <!--miniprogram/pages/cateContent/cateConetnt.wxml-->
 <view class="cateContent">
-<view class="cc-title">
-  <view class="cc-menu">
-    <view class="menu-ul">
-      <view class="menu-item " bindtap="allClick">全部</view>
-      <view wx:for="{{menuList}}" bindtap="avtiveClick" data-text="{{item.code}}"  wx:for-index="idx" wx:if="{{idx<6}}" class="menu-item {{item.code === textCode ? 'menuActive':''}}">{{item.metaDataValue}}</view>
+  <view class="cc-title">
+    <scroll-view scroll-x scroll-into-view="{{ctoView}}" class="cc-menu">
+      <view class="menu-ul">
+        <view id="{{item.code}}" wx:for="{{menuList}}" bindtap="avtiveClick" data-text="{{item.code}}" wx:for-index="idx" wx:key="subCategoryId" wx:if="{{idx<6}}" class="menu-item {{item.code === textCode ? 'menuActive':''}}">{{item.metaDataValue}}</view>
+      </view>
+    </scroll-view>
+    <view class="arrow-btn" bindtap="submenuClick">
+      >
     </view>
   </view>
-  <view class="arrow-btn">
-    >
-  </view>
-</view>
-<scroll-view scroll-y  class="list-container">
-    <view wx:for="{{listView}}" class="list-view">
+  <scroll-view scroll-y class="list-container">
+    <view wx:for="{{listView}}" wx:key="id" class="list-view">
       <image src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}!op_type=3&columns=144&rows=144&magick=webp"></image>
       <view class="list-content">
         <view class="list-title">{{item.albumInfo.title}}</view>
         <view class="list-subtitle">{{item.albumInfo.shortIntro}}</view>
         <view class="list-count">
-            <text class="count1">{{"<i>"}}{{item.statCountInfo.trackCount}}</text>
-            <text class="count2">{{"<i>"}}{{item.statCountInfo.playCount/10000}}万</text>
+          <text class="count1">{{"<i>"}}{{item.statCountInfo.trackCount}}</text>
+          <text class="count2">{{"<i>"}}{{item.statCountInfo.playCount/10000}}万</text>
         </view>
-        
+
+      </view>
+
+      <view class="list-border"></view>
     </view>
-     
-    <view class="list-border"></view>
-     </view>
-</scroll-view>
+  </scroll-view>
+  <view class="submenu" wx:if="{{isShow}}" bindtap="submenuClick">
+    <view class="subUl">
+      <view wx:for="{{menuList}}" wx:for-index="idx" class="subItem {{item.code === textCode ? 'menuActive':''}}" wx:key="subCategoryId" wx:if="{{idx<6}}" bindtap="avtiveClick" data-text="{{item.code}}" >
+        {{item.metaDataValue}}
+      </view>
+    </view>
+    <view class="subFill"></view>
+  </view>
 </view>
-  

@@ -2,6 +2,7 @@
 .cateContent{
   display: flex;
   flex-direction: column;
+  position: relative
 }
 .cc-title{
 
@@ -10,17 +11,16 @@
  position: relative;
 }
 .cc-menu{
-  
   z-index: 20;
   height: 80rpx;
-  overflow-x:scroll;
+ 
 }
 .menu-ul{
 width:max-content;
 padding-right: 80rpx;
 }
 .menu-item{
-  position: relative;
+  
   font-size: 28rpx;
   display: inline-block;
   width: 130rpx;
@@ -30,6 +30,7 @@ padding-right: 80rpx;
   line-height: 80rpx;
 }
 .menuActive{
+  position: relative;
   color: #f86442
 }
 .menuActive::before{
@@ -116,4 +117,34 @@ padding-right: 80rpx;
 }
 .count1{
   margin-right: 30rpx;
+}
+.submenu{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+ 
+}
+.subUl{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  z-index: 10
+}
+.subItem{
+  flex: 0 0 25%;
+  height: 80rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.subFill{
+  background: #000;
+  opacity: .2;
+  height: 100%;
 }
