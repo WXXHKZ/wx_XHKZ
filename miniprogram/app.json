@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/profile/profile",
     "pages/index/index",
     "pages/playlist/playlist",
     "pages/category/category",
@@ -8,6 +7,7 @@
     "pages/collection/collection",
     "pages/search/search",
     "pages/blog-edit/blog-edit",
+    "pages/profile/profile",
     "pages/blog-comment/blog-comment"
   ],
   "window": {
