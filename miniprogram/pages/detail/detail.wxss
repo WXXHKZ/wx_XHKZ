@@ -165,6 +165,7 @@ page {
   background: #fff;
   z-index: 99;
   border-radius: 20rpx 20rpx 0 0;
+  width: 100%;
 }
 
 .playlist-title {

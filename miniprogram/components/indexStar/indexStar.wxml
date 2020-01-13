@@ -3,7 +3,7 @@
   <text class="star-more">查看全部></text>
 </view>
 <view class="starList">
-  <view class="starItem" wx:for="{{starList}}" wx:key="cover">
+  <view class="starItem" wx:for="{{starList}}" data-val="{{item}}" bindtap="goToDetail" wx:key="cover">
     <image class="starImg" src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}"></image>
     <view class="starItem-countbox">
       <text class="starItem-playcount">{{item.statCountInfo.playCount}}</text>

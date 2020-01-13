@@ -81,7 +81,7 @@
             {{item.nickname}}
           </view>
           <view class="commentator-time">
-            2019-02-13
+           {{item.createAt}}
           </view>
         </view>
         <view class="commentator-box-right">
