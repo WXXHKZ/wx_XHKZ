@@ -72,6 +72,15 @@ Page({
       isShow: !this.data.isShow
     })
   },
+  //详情页
+  dealClick(e){
+    let { albuminfoid, anchorinfoid } = e.currentTarget.dataset
+    console.log(albuminfoid, anchorinfoid)
+    wx.navigateTo({
+      url: `/pages/detail/detail?albumInfoId=${albuminfoid}&anchorInfoId=${anchorinfoid}`,
+    })
+   
+  },
   onLoad: function (options) {
     if(options.allCode){
       this.setData({

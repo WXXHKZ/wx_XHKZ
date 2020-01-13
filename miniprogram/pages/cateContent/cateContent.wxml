@@ -11,7 +11,7 @@
     </view>
   </view>
   <scroll-view scroll-y class="list-container">
-    <view wx:for="{{listView}}" wx:key="id" class="list-view">
+    <view wx:for="{{listView}}" wx:key="id" class="list-view" bindtap="dealClick" data-albumInfoId="{{item.albumInfo.id}}" data-anchorInfoId="{{item.anchorInfo.id}}">
       <image src="https://imagev2.xmcdn.com/{{item.albumInfo.cover}}!op_type=3&columns=144&rows=144&magick=webp"></image>
       <view class="list-content">
         <view class="list-title">{{item.albumInfo.title}}</view>
