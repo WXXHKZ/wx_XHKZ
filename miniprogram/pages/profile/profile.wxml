@@ -159,4 +159,4 @@
     </view>
   </view>
 </view>
-  <view class="bg {{isBtnHide ? 'hide' : ''}}"></view>
+  <view class="bg {{isBtnHide ? 'hide' : ''}} {{signInShow ? 'show' : ''}}"></view>

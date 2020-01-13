@@ -156,6 +156,7 @@
   border-radius: 5%;
   display: none;
   padding-bottom: 80rpx;
+  z-index: 999;
 }
 #signin .h{
   font-size: 30rpx;

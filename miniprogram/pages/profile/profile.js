@@ -24,11 +24,6 @@ Page({
       isBtnHide: true,
       userImg: ''
     })
-    // this.animate('.bg', [{
-    //   opacity: '0.6',
-    // }, {
-    //   opacity: '0'
-    // }], 500)
   },
 
   // 签到
@@ -88,6 +83,7 @@ Page({
   /** 切换模式 **/
   switchChange: function (e) {
     var that = this
+    console.log(e.detail.value)
     /**  开启夜间模式   **/
     if(e.detail.value) {
       app.globalData.skin = "black"
@@ -120,11 +116,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.setNavBarBg()
     this.setData({
       skinStyle: app.globalData.skin,
       skinSwitch: app.globalData.skinSwitch
     }) 
+    // 登录凭证
+    wx.login({
+      success: function(res) {
+        if(res.code) {
+          console.log('登陆凭证：' + res.code)
+        } else {
+          console.log('登陆失败：' + res.errMsg)
+        }
+      }
+    })
   },
 
   bindGetUserInfo: function(e) {
@@ -147,21 +152,11 @@ Page({
     this.setData({
       isBtnHide: false
     })
-    // this.animate('.bg', [{
-    //   opacity: '0',
-    // }, {
-    //   opacity: '0.6'
-    // }], 500)
   },
   cancel: function () {
     this.setData({
       isBtnHide: true
     })
-    // this.animate('.bg', [{
-    //   opacity: '0.6',
-    // }, {
-    //   opacity: '0'
-    // }], 500)
   },
 
 
@@ -169,11 +164,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    // 签到天数渲染
-    let signDay = wx.getStorageSync('Fir')
-    this.setData({
-      signDays: signDay
-    })
+    
   },
 
   /**
