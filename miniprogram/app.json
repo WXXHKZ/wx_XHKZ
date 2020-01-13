@@ -38,6 +38,12 @@
         "selectedIconPath": "images/home-active.png"
       },
       {
+        "pagePath": "pages/playlist/playlist",
+        "text": "音乐",
+        "iconPath": "images/music.png",
+        "selectedIconPath": "images/music-active.png"
+      },
+      {
         "pagePath": "pages/category/category",
         "text": "分类",
         "iconPath": "images/cate.png",
@@ -48,12 +54,6 @@
         "text": "发现",
         "iconPath": "images/find.png",
         "selectedIconPath": "images/find-active.png"
-      },
-      {
-        "pagePath": "pages/collection/collection",
-        "text": "收藏",
-        "iconPath": "images/collection.png",
-        "selectedIconPath": "images/collection-active.png"
       },
       {
         "pagePath": "pages/profile/profile",

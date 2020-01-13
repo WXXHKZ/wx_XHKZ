@@ -12,33 +12,50 @@ Component({
    */
   data: {
     menuList: [{
-        id: '1',
-        title: '音乐电台',
+        id: 'youshengshu',
+        title: '有声书',
+        itemCode: 'youshengshu',
         url: 'http://fdfs.xmcdn.com/group57/M0A/3B/D0/wKgLgVyQuqWRZsJtAAAnr8tg4rs307.png'
       }, {
-        id: '2',
-        title: '言情',
+        id: 'xiangsheng',
+        title: '相声评书',
+        itemCode: 'xiangshengpingshu',
         url: 'http://fdfs.xmcdn.com/group63/M03/00/EF/wKgMclz13MPBZzrTAACa07xW7PU710.png'
       },
       {
-        id: '3',
-        title: '都市',
+        id: 'yule',
+        title: '娱乐',
+        itemCode: 'yule',
         url: 'http://fdfs.xmcdn.com/group63/M03/00/E8/wKgMaFz13MjDAnt_AACVeUyfRiA157.png'
       },
       {
-        id: '4',
-        title: '悬疑',
+        id: 'yingshi',
+        title: '影视',
+        itemCode: 'yingshi',
         url: 'http://fdfs.xmcdn.com/group63/M03/00/E9/wKgMaFz13M3jLqMZAADhZejycAc850.png'
       },
       {
-        id: '5',
-        title: '幻想',
+        id: 'qinggan',
+        title: '情感生活',
+        itemCode: 'qingganshenghuo',
         url: 'http://fdfs.xmcdn.com/group63/M05/00/E9/wKgMaFz13NHTvod5AACml8OQjPI794.png'
       },
-
       {
-        id: '6',
+        id: 'lishi',
+        title: '历史',
+        itemCode: 'lishi',
+        url: 'http://fdfs.xmcdn.com/group62/M03/01/75/wKgMcVz16F7ThbfSAABbYU4_QSM299.png'
+      },
+      {
+        id: 'shangye',
+        title: '商业财经',
+        itemCode: 'shangyecaijing',
+        url: 'http://fdfs.xmcdn.com/group62/M02/01/7F/wKgMcVz16RLyRN8gAAC4-7z2kGs871.png'
+      },
+      {
+        id: '8',
         title: '全部分类',
+        itemCode: '',
         url: 'http://fdfs.xmcdn.com/group63/M03/00/F1/wKgMclz13NXj3_S6AAAO9ZkPU-I921.png'
       }
     ]
@@ -50,9 +67,14 @@ Component({
   methods: {
     handleTapNav(e) {
       const ds = e.currentTarget.dataset
-      if (ds.id === '1') {
+      console.log(ds.id)
+      if (ds.id === '8') {
+        wx.switchTab({
+          url: `/pages/category/category`,
+        })
+      } else {
         wx.navigateTo({
-          url: `/pages/playlist/playlist`,
+          url: `/pages/cateContent/cateContent?allCode=${ds.id}`,
         })
       }
     }

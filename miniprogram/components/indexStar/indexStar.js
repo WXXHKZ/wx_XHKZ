@@ -30,6 +30,14 @@ Component({
         let decimal = numStr.substring(numStr.length - 8, numStr.length - 8 + point)
         return parseFloat(parseInt(num / 100000000) + '.' + decimal) + '亿'
       }
+    },
+    goToDetail(e) {
+      let val = e.currentTarget.dataset.val
+      let albumInfoId = val.albumInfo.id
+      let anchorInfoId = val.anchorInfo.id
+      wx.navigateTo({
+        url: `/pages/detail/detail?albumInfoId=${albumInfoId}&anchorInfoId=${anchorInfoId}`,
+      })
     }
 
   },
